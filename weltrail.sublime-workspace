@@ -1,0 +1,705 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"gets",
+				"getsubtopics"
+			],
+			[
+				"tags",
+				"Tags"
+			],
+			[
+				"db",
+				"dbhandle"
+			],
+			[
+				"Dater",
+				"dateRange"
+			],
+			[
+				"contact",
+				"contactTypes"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"cs",
+				"csvText"
+			],
+			[
+				"_",
+				"_GET"
+			],
+			[
+				"start",
+				"startDay"
+			],
+			[
+				"opportunity",
+				"Opportunity"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"teaspoons",
+				"teaspoons"
+			],
+			[
+				"teaspoon",
+				"teaspoon"
+			],
+			[
+				"category",
+				"categoryisAlreadyIndexed"
+			],
+			[
+				"atr",
+				"attributename"
+			],
+			[
+				"group",
+				"groupEnd"
+			],
+			[
+				"dis",
+				"displayString"
+			],
+			[
+				"attribute",
+				"attributeName"
+			],
+			[
+				"object",
+				"objectarray"
+			],
+			[
+				"di",
+				"displaystring"
+			],
+			[
+				"iamge",
+				"images"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"border-radius",
+				"border-top-left-radius"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"inline",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "dataExport.php",
+			"settings":
+			{
+				"buffer_size": 26386,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "csvDownload.php",
+			"settings":
+			{
+				"buffer_size": 6274,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dataExportClass.php",
+			"settings":
+			{
+				"buffer_size": 136210,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "crhconsult.php",
+			"settings":
+			{
+				"buffer_size": 14293,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "crhconsultclass.php",
+			"settings":
+			{
+				"buffer_size": 39487,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/Data/Documents/Misc/personal writing/RSPOF.txt",
+			"settings":
+			{
+				"buffer_size": 147195,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/dan/Kompleet/www/crinjuryclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/criconsultclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/criconsult.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/crpconsultclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/crpconsult.php",
+		"/C/xampp/htdocs/dan/HoneyEggOrganicFarms/HoneyEggOrganicFarms.css",
+		"/C/xampp/htdocs/dan/HoneyEggOrganicFarms/HoneyEggOrganicFarms.js",
+		"/C/xampp/htdocs/dan/HoneyEggOrganicFarms/honeyEggGallery.js",
+		"/C/xampp/htdocs/dan/HoneyEggOrganicFarms/HoneyEggProducts.js",
+		"/C/xampp/htdocs/dan/HoneyEggOrganicFarms/HoneyEggOrganicFarms.php",
+		"/C/xampp/htdocs/dan/HoneyEggOrganicFarms/HoneyEggOrganicFarmsProducts.php",
+		"/C/xampp/htdocs/dan/Kompleet/welltrail DB info etc.txt",
+		"/C/xampp/htdocs/dan/DataBaseManagement/databaseInfo.txt",
+		"/C/xampp/htdocs/dan/Kompleet/www/sessionclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/dataExportClass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/csvDownload.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/dataExport.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/dbclass.php",
+		"/C/xampp/htdocs/dan/CMS type softwares/Bootstrap/bootstrap-3.0.0/_config.yml",
+		"/G/Data/Documents/Misc/personal writing/BusinessPlan.txt",
+		"/C/xampp/htdocs/dan/Arduino/Lights/lights.ino",
+		"/C/xampp/htdocs/dan/HoneyEggOrganicFarms/gallery.css",
+		"/C/xampp/htdocs/dan/Arduino/Lights/arduinoLightPage.html",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/DB_BACK_UP-1397008260-welltrail-FullBackUpOf66Tables.sql",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/DataBaseBackupScript.php",
+		"/C/Users/Dan/Desktop/DB_BACK_UP-1397007526-welltrail-contact,employee,altoona,Plus2MoreTables.sql/DB_BACK_UP-1397007526-welltrail-contact,employee,altoona,Plus2MoreTables.sql",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/DB_BACK_UP-1397007063-welltrail-contact,employee,altoona,Plus2MoreTableblahalfajshdfajksdhajksdasdffffffffffffffffffffffffs.sql/DB_BACK_UP-1397007063-welltrail-contact,employee,altoona,Plus2MoreTables.sql",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/DB_BACK_UP-1397003460-welltrail-contact,employee,altoona,Plus2MoreTables.sql",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/backup-1396982791.zip",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/db-backup-1396980999-welltrail-contact,employee,altoona,Plus1MoreTables.sql",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/backup.php",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/db-backup-1396977287-contact,employee,altoona,ipmain.sql",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/db-backup-1396908236-2f8a6bf31f3bd67bd2d9720c58b19c9a.sql",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/file2.sql",
+		"/C/xampp/htdocs/dan/Kompleet/MySQL BackUp Script/file.sql",
+		"/C/xampp/htdocs/dan/Kompleet/www/cryptclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/MackStudios.com/petermack.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/crempclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/javascripts/dateRangeSelect.js",
+		"/C/xampp/htdocs/dan/Kompleet/mackstudiosCaptchaKeys.txt",
+		"/C/xampp/htdocs/dan/Kompleet/MackStudios.com/contact.php",
+		"/C/xampp/htdocs/dan/Kompleet/MackStudios.com/_php/footer.php",
+		"/C/xampp/htdocs/dan/Kompleet/MackStudios.com/contactFormVerification.php",
+		"/C/Users/Dan/Desktop/recaptcha-php-1.11/recaptcha-php-1.11/README",
+		"/C/Users/Dan/Desktop/MackStudios.com/contact.php",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/DateRangeSelect/dateRangeSelect.html",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/DateRangeSelect/dateRangeSelect.js",
+		"/G/Data/Documents/Misc/personal writing/RSPOF.txt",
+		"/C/xampp/htdocs/dan/Kompleet/www/stylesheets/welltrail.css",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/DateRangeSelect/dateRangeSelect.css",
+		"/C/xampp/htdocs/dan/Kompleet/www/firebugPHPlogging.php",
+		"/C/Users/Dan/Desktop/cremp.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/javascripts/datepicker.js",
+		"/C/xampp/htdocs/dan/Kompleet/www/work.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/stylesheets/dateRangeSelect.css",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/AccountPanelSet/AccountPanelSet.html",
+		"/C/xampp/htdocs/dan/Kompleet/www/login.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/loginclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/anoplate.php",
+		"/C/xampp/htdocs/dan/firePHPsetup.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/header.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/cremp.php",
+		"/C/xampp/htdocs/dan/HoneyEggOrganicFarms/Time",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/ImageGallery/ImageGallery.js",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/ImageGallery/ImageGallery.html",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/ImageGallery/ImageGallery.css",
+		"/C/xampp/htdocs/dan/Kompleet/www/www/_dbclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/www/sessionclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/www/loginclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/www/login.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/www/dbclass.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/www/dataExport.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/www/header.php",
+		"/C/xampp/htdocs/dan/Kompleet/www/www/firebugPHPlogging.php",
+		"/C/xampp/htdocs/dan/DataBaseManagement/Creating DataBases/DataBaseDeletionScript.php",
+		"/C/xampp/htdocs/dan/TestingPage/DataManager/DataManager.php",
+		"/C/xampp/htdocs/dan/TestingPage/databaseCreationandModificationScript.php",
+		"/C/xampp/htdocs/dan/DataBaseManagement/Creating Tables/TableCreationScript.php",
+		"/C/xampp/htdocs/dan/pizza/pizzashop.php",
+		"/C/xampp/htdocs/dan/DataBaseManagement/Creating DataBases/DataBaseCreationScript.php",
+		"/C/xampp/htdocs/dan/DataBaseManagement/Adding and Modifying Data/DataModificationScript.php",
+		"/C/Users/Dan/Desktop/recipes.php",
+		"/C/Users/Dan/Desktop/recipes.xml",
+		"/C/xampp/htdocs/dan/pizza/checkout.php",
+		"/C/xampp/htdocs/dan/TestingPage/index.html",
+		"/G/misc.txt",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/ImageGallery/ImageGallery-min-2-10-14.js",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/SimpleFrontPage/SimpleFrontPage.js",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/SimpleFrontPage/SimpleFrontPage.css",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/SimpleFrontPage/SimpleFrontPage.html",
+		"/C/xampp/htdocs/dan/HoneyEggOrganicFarms/HoneyEggOrganicFarms.html",
+		"/C/xampp/htdocs/dan/TestingPage/DataManager.php",
+		"/C/Users/Dan/Desktop/letter.txt",
+		"/C/Users/Dan/Desktop/index.html",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/CSS_Modules/links.css",
+		"/C/xampp/htdocs/dan/Eudaimonia_Modules/Modules__HTML&CSS&JS/Image_Gallery/ImageGallery.html",
+		"/C/xampp/htdocs/dan/TestingPage/trial.php",
+		"/C/xampp/htdocs/dan/TestingPage/LearningDatabase.php",
+		"/C/xampp/htdocs/dan/TestingPage/FormDataInsertion.html",
+		"/C/xampp/htdocs/dan/TestingPage/insert.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"topic",
+			"crhc",
+			"pCon",
+			"com",
+			"crpc",
+			"gettopics",
+			"obj1",
+			"$obj1",
+			"Topics",
+			"topics",
+			"cric",
+			"round",
+			"$contacts[$contactIndex]",
+			"$consults",
+			"dbhandleSQLI",
+			"dbhandleSQLI(",
+			"dbhandle",
+			"$fullRestore",
+			"$fullReport",
+			"$min",
+			"$contactCount",
+			"year_end",
+			"day_end",
+			"month_end",
+			"year_start",
+			"day_start",
+			"month_start",
+			"datepicker",
+			"datepicker.css",
+			"ceilingRed.state",
+			"ceilingRed.pin",
+			"ceilingRed.state",
+			"ceilingRed",
+			"ClosetLights",
+			"Blue",
+			"Green",
+			"Red",
+			"SlantLights",
+			"CLstate",
+			"$tablename = \"",
+			"but1",
+			"create",
+			"$createEmployee",
+			"$obj1",
+			"sel1",
+			"token",
+			"encode",
+			"$epass",
+			"$euname",
+			"cleaninput",
+			"ajR3.open",
+			"images",
+			"object",
+			"images",
+			"		var marbleSlab = images.slice(0);",
+			"images",
+			"marbleSlab",
+			"funky",
+			"structure",
+			"STRUCTURE",
+			"structure",
+			"writeContent(",
+			"year",
+			"ocurring",
+			"arrayvalues",
+			"createValuesArray",
+			"typE",
+			"addContent",
+			"taGs",
+			"image",
+			"season",
+			"appendPane",
+			"yooo",
+			"createDisplayString",
+			"BuildPanes_Images",
+			"imagestests",
+			"structure-1",
+			"visual-2",
+			"visual-1",
+			"structure"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$fullRestore",
+			"endYear",
+			"endDay",
+			"endMonth",
+			"startYear",
+			"startDay",
+			"startMonth",
+			"ceilingRed_state",
+			"ceilingRed_pin",
+			"ceilingRed.pin",
+			"ceilingRed.state",
+			"closet",
+			"ceilingBlue",
+			"ceilingGreen",
+			"ceilingRed",
+			"wall",
+			"closetState",
+			"$dataExport",
+			"$createEmployee",
+			"$encodedPassword",
+			"$encodedUsername",
+			"selected",
+			"Year",
+			"occurring",
+			"ocurringValues",
+			"createArrayOfOcurringValuesIndexedByProperty",
+			"Type",
+			"tYpe",
+			"Type",
+			"traverseArrayAndCreateDisplayStrings"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "dataExport.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 26386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								605,
+								605
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "csvDownload.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6270,
+								6270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1470.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "dataExportClass.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 136210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19355,
+								19355
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "crhconsult.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14293,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5128,
+								5128
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1554.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "crhconsultclass.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 39487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39270,
+								39270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 19253.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "/G/Data/Documents/Misc/personal writing/RSPOF.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 147195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								146979,
+								146984
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 22890.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.648531427673,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "/C/Users/Dan/Desktop/HoneyEgg.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 131.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
