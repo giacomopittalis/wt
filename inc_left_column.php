@@ -28,6 +28,21 @@
                 <li><img src="img/ico_edit_ic.jpg"><a href="editiconsult.php">Edit Injury Consult</a></li>
                 <li><img src="img/ico_edit_oc.jpg"><a href="editoconsult.php">Edit Opportunity Consult</a></li>
                 <li><img src="img/ico_edit_pc.jpg"><a href="editpconsult.php">Edit Proactive Consult</a></li>
-                <li><img src="img/ico_export.jpg">Export</li>
+            </ul>
+        </div>
+
+      <div id="create">
+                REPORTS OVERVIEW
+        </div>
+        <div class="menu-list">
+            <ul id="create-list">
+                <li><img src="img/ico_edit_employee.jpg"><a href="mconrep.php">Contact Report</a></li>  
+                <li><img src="img/ico_edit_employee.jpg"><a href="toprep.php">Topic Report</a></li> 
+                <li><img src="img/ico_edit_employee.jpg"><a href="emp_reports.php">Employee Report</a></li>
+                <li><img src="img/ico_edit_employee.jpg"><a href="tconrep.php">Total Number Of Consults </a></li>
+                <li><img src="img/ico_edit_employee.jpg"><a href="conperemp.php">Contacts Per Employee</a></li>
+                <li><img src="img/ico_edit_employee.jpg"><a href="consperemp.php">Consults Per Employee</a></li>
+                <li><img src="img/ico_edit_employee.jpg"><a href="partrep.php">PARTICIPATION REPORT</a></li>
+                <li><img src="img/ico_edit_employee.jpg"><a href="participation.php">PARTICIPATION REPORT 2 (BETA) </a></li> 
             </ul>
         </div>

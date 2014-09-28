@@ -11,7 +11,7 @@ $obj1 = new clcon;
 $xxx = "Darla";
 $xxx = $obj1->encode($xxx);
 echo "Encoded: $xxx";
-$yyy="2iHvJjviiP02tOgRjJ1llO1gGvUOlCWiTMpMqVVPwzs";
+$yyy="_075xfZZXI4icnPVd9bV_SI6duxAise_aV71KeY28Jw";
 $xxx = $obj1->decode($yyy);
 echo "<br>Decoded: $xxx";
 ?>
