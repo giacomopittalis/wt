@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welltrail | Data Graph</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/daterangepicker.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <img class="user-picture" src="img/profile.png" />
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="user-name">John Smith</span> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="change_password.html"><i class="fa fa-fw fa-gear"></i> Change Password</a></li>
+                        <li><a href="login.html"><i class="fa fa-fw fa-power-off"></i> Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </nav>
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="dashboard.html"><span class="sidebar-icon i01"></span>Dashboard</a>
+                </li>
+
+                <li class="sidebar-section">CREATE</li>
+                <li><a href="create_employee.html"><span class="sidebar-icon i02"></span>Create Employee</a></li>
+                <li><a href="create_contact.html"><span class="sidebar-icon i03"></span>Create Contact</a></li>
+                <li><a href="health_consult.html"><span class="sidebar-icon i04"></span>New Health Consult</a></li>
+                <li><a href="injury_consult.html"><span class="sidebar-icon i05"></span>New Injury Consult</a></li>
+                <li><a href="opportunity_consult.html"><span class="sidebar-icon i06"></span>New Opportunity Consult</a></li>
+                <li><a href="proactive_consult.html"><span class="sidebar-icon i07"></span>New Proactive Consult</a></li>
+                <li><a href="well_credit_consult.html"><span class="sidebar-icon i08"></span>New Well Credit Consult</a></li>
+                
+                <li class="sidebar-section">EDIT</li>
+                <li><a href="edit_employee.html"><span class="sidebar-icon i09"></span>Edit Employee</a></li>
+                <li><a href="delete_employee.html"><span class="sidebar-icon i10"></span>Delete Employee</a></li>
+                <li><a href="close_contact.html"><span class="sidebar-icon i11"></span>Close Contact</a></li>
+                <li><a href="edit_health_consult.html"><span class="sidebar-icon i12"></span>Edit Health Consult</a></li>
+                <li><a href="edit_injury_consult.html"><span class="sidebar-icon i13"></span>Edit Injury Consult</a></li>
+                <li><a href="edit_opportunity_consult.html"><span class="sidebar-icon i14"></span>Edit Opportunity Consult</a></li>
+                <li><a href="edit_proactive_consult.html"><span class="sidebar-icon i15"></span>Edit Proactive Consult</a></li>
+                <li><a href="data_export.html"><span class="sidebar-icon i16"></span>Export</a></li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+    
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="content-header row">
+                    <h1>Data Graph</h1>
+                </div>
+                <div class="content-body row">
+                    <div class="col-sm-12">
+                    
+                        <div class="form-section">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h3>Company Trends Graphs</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Date Range</label><br />
+                                        <input type="text" name="date-range" id="datepicker" class="form-control calendar-input" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-4">
+                                    <div class="graph-container">
+                                        <canvas id="canvas" height="300" width="650"></canvas>
+                                        <ul class="graph-labels">
+                                            <li class="graph-label"></li>
+                                            <li class="graph-label"></li>
+                                            <li class="graph-label"></li>
+                                            <li class="graph-label"></li>
+                                            <li class="graph-label"></li>
+                                            <li class="graph-label"></li>
+                                        </ul>
+                                    </div>                                        
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery.daterangepicker.js"></script>
+    <script src="js/chart.js"></script>
+    <script>
+        $('#datepicker').dateRangePicker({
+            format: 'DD MMMM, YYYY',
+            separator: ' - ',
+            time: {
+                enabled: false
+            },
+            shortcuts:null,
+            customShortcuts:[
+                {
+                    name: 'This Month',
+                    dates : function()
+                    {
+                        var start = moment().date(1).toDate();
+                        var end = moment().date(31).toDate();
+                        end = new Date(end.getTime() - 86400000);
+                        return [start,end];
+                    }
+                },
+                {
+                    name: 'This Year',
+                    dates : function()
+                    {
+                        var start = moment().dayOfYear(1).toDate();
+                        var end = moment().dayOfYear(366).toDate();
+                        end = new Date(end.getTime() - 86400000);
+                        return [start,end];
+                    }
+                },
+            ]
+        }).bind('datepicker-change',function(event,obj)
+        {
+            var days = (obj.date2.getTime() - obj.date1.getTime()) / (1000 * 60 * 60 * 24);
+            console.log(days);
+
+            // obj will be something like this:
+            // {
+            //      date1: (Date object of the earlier date),
+            //      date2: (Date object of the later date),
+            //      value: "2013-06-05 to 2013-06-07"
+            // }
+            $('#datepicker').data('dateRangePicker').close()
+            myBar.datasets[0].bars[0].value = randomScalingFactor();
+            myBar.datasets[0].bars[1].value = randomScalingFactor();
+            myBar.datasets[0].bars[2].value = randomScalingFactor();
+            myBar.datasets[0].bars[3].value = randomScalingFactor();
+            myBar.datasets[0].bars[4].value = randomScalingFactor();
+            myBar.datasets[0].bars[5].value = randomScalingFactor();
+            $(".graph-label").eq(0).html("2 Sep");
+            $(".graph-label").eq(1).html("4 Sep");
+            $(".graph-label").eq(2).html("6 Sep");
+            $(".graph-label").eq(3).html("8 Sep");
+            $(".graph-label").eq(4).html("10 Sep");
+            $(".graph-label").eq(5).html("12 Sep");
+            myBar.update();
+        })
+        .bind('datepicker-apply',function(event,obj)
+        {
+            console.log("apply");
+        })
+        .bind('datepicker-close',function()
+        {
+            console.log('close');
+        });
+
+        var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+        var barChartData = {
+            labels : ["","","","","",""],
+            datasets : [
+                {
+                    fillColor : "rgba(141,197,37,1)",
+                    strokeColor : "rgba(0,0,0,0)",
+                    highlightFill: "rgba(141,197,37,0.75)",
+                    highlightStroke: "rgba(141,197,37,0.9)",
+                    data : [0,0,0,0,0,0]
+                }
+            ]
+
+        }
+        window.onload = function(){
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx).Bar(barChartData, {
+                // responsive : true
+                barValueSpacing : 20,
+                scaleGridLineColor : "rgba(217,217,217,0.1)",
+                barShowStroke : false,
+                scaleFontColor: "#555",
+                scaleLineColor: "rgba(245,245,245,1)",
+                scaleLineWidth: 2,
+                scaleShowLabels: true,
+            });
+        }
+    </script>
+
+</body>
+
+</html>

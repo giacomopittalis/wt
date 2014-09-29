@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'database',
+			'host'      => '127.0.0.1',
+			'database'  => 'p_welltrail_dev',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'm4s4d3p4n',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

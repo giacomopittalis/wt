@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'HomeController@dashboard');
+Route::get('dashboard','HomeController@dashboard');
+
+//Employee
+Route::get('employee/create', array('as' => 'employee.create', 'uses' => 'EmployeeController@create'));
+Route::post('employee/store', array('as' => 'employee.store', 'uses' => 'EmployeeController@store'));
