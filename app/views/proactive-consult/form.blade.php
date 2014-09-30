@@ -1,0 +1,45 @@
+@extends('layouts.main')
+
+@section('page-title')
+	New Proactive Consult
+@stop
+
+@section('content')
+	{{ Form::open(array('route' => 'proactive-consult.store','id' => 'create-employee')) }}
+		@include('partials.notification')
+        @include('partials.forms.client-information')
+        <div class="form-section">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Comment</h3>
+                </div>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Select Comments</label><br>
+                                <select name="type">
+                                    <option value="0" disabled="" selected="">Please Select</option>
+                                    <option value="comment-1">Comment 1</option>
+                                    <option value="comment-2">Comment 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <textarea name="comment"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @include('partials.forms.notes')
+        <div class="submit-section">
+        	{{ Form::hidden('health_consult_id',(isset($health_consult->id) ? $health_consult->id : '')) }}
+        	{{ Form::submit('Create',array('class' => 'btn btn-submit right')) }}
+            <button type="button" class="btn btn-cancel right">Cancel</button>
+            <div class="clear"></div>
+        </div>
+    {{ Form::close() }}
+@stop

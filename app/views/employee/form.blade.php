@@ -5,7 +5,21 @@
 @stop
 
 @section('content')
-	{{ Form::open(array('route' => 'employee.store','id' => 'create-employee')) }}
+	{{ Form::open(array('route' => 'employee.store','id' => 'create-employee', 'files' => true)) }}
+		{{ Notification::showAll() }}
+		@if($errors->all())
+			<div class="form-section">
+			@foreach($errors->all() as $message)
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="alert alert-danger" role="alert">
+					    	{{ $message }}
+					    </div>
+					</div>
+				</div>
+			@endforeach
+			</div>
+		@endif
         <div class="form-section">
             <div class="row">
                 <div class="col-sm-4">
@@ -108,12 +122,13 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <input type="file" name="identification" class="form-control" />
+                    	{{ Form::file('identification',array('class' => 'form-control')) }}
                     </div>
                 </div>
             </div>
         </div>
         <div class="submit-section">
+        	{{ Form::hidden('employee_id',(isset($employee->id) ? $employee->id : '')) }}
         	{{ Form::submit('Create',array('class' => 'btn btn-submit right')) }}
             <button type="button" class="btn btn-cancel right">Cancel</button>
             <div class="clear"></div>

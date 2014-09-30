@@ -52,22 +52,18 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand active">
-                    <a href="dashboard.html"><span class="sidebar-icon i01"></span>Dashboard</a>
+                <li class="sidebar-brand @if(Request::url() == URL::to('dashboard'))active@endif">
+                    <a href="{{ URL::route('dashboard') }}"><span class="sidebar-icon i01"></span>Dashboard</a>
                 </li>
 
                 <li class="sidebar-section">CREATE</li>
-                <li>
-                    <a href="{{ URL::route('employee.create') }}">
-                        <span class="sidebar-icon i02"></span>Create Employee
+                @foreach(AppHelper::getCreateMenu() as $menu)
+                <li @if(Request::url() == $menu['href'])class="active"@endif>
+                    <a href="{{ $menu['href'] }}">
+                        <span class="sidebar-icon {{ $menu['icon'] }}"></span>{{ $menu['text'] }}
                     </a>
                 </li>
-                <li><a href="create_contact.html"><span class="sidebar-icon i03"></span>Create Contact</a></li>
-                <li><a href="health_consult.html"><span class="sidebar-icon i04"></span>New Health Consult</a></li>
-                <li><a href="injury_consult.html"><span class="sidebar-icon i05"></span>New Injury Consult</a></li>
-                <li><a href="opportunity_consult.html"><span class="sidebar-icon i06"></span>New Opportunity Consult</a></li>
-                <li><a href="proactive_consult.html"><span class="sidebar-icon i07"></span>New Proactive Consult</a></li>
-                <li><a href="well_credit_consult.html"><span class="sidebar-icon i08"></span>New Well Credit Consult</a></li>
+                @endforeach
                 
                 <li class="sidebar-section">EDIT</li>
                 <li><a href="edit_employee.html"><span class="sidebar-icon i09"></span>Edit Employee</a></li>
@@ -104,11 +100,12 @@
     <script src="{{ asset('assets/js/application.js') }}">
 
     <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
+    <script type="text/javascript">
+        $("#menu-toggle").click(function(e) 
+        {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
     </script>
 
 </body>
