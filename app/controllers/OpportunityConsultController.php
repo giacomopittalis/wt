@@ -14,6 +14,11 @@ class OpportunityConsultController extends BaseController
 		return View::make('opportunity-consult.form');
 	}
 
+	public function edit()
+	{
+		return View::make('opportunity-consult.form');
+	}
+
 
 	//need add validation
 	public function store()

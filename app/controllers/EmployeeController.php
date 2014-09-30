@@ -16,7 +16,12 @@ class EmployeeController extends BaseController
 
 	public function edit()
 	{
+		return View::make('employee.form');
+	}
 
+	public function delete()
+	{
+		
 	}
 
 	public function store()

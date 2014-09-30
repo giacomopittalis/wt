@@ -14,6 +14,11 @@ class ProactiveConsultController extends BaseController
 		return View::make('proactive-consult.form');
 	}
 
+	public function edit()
+	{
+		return View::make('proactive-consult.form');
+	}
+
 
 	//need add validation
 	public function store()

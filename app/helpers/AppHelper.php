@@ -247,4 +247,58 @@ class AppHelper
 				 ),
 			   );
 	}
+
+	public static function getEditMenu()
+	{
+		return array(
+				 array
+				 (
+				 	'href' 	=> URL::route('employee.edit'),
+				 	'icon' 	=> 'i09',
+				 	'text'	=> 'Edit Employee'
+				 ),
+				 array
+				 (
+				 	'href' 	=> URL::route('employee.delete'),
+				 	'icon' 	=> 'i10',
+				 	'text'	=> 'Delete Employee'
+				 ),
+				 array
+				 (
+				 	'href' 	=> URL::route('contact.close'),
+				 	'icon' 	=> 'i11',
+				 	'text'	=> 'Close Contact'
+				 ),
+				 array
+				 (
+				 	'href' 	=> URL::route('health-consult.edit'),
+				 	'icon' 	=> 'i12',
+				 	'text'	=> 'Edit Health Consult'
+				 ),
+				 array
+				 (
+				 	'href' 	=> URL::route('injury-consult.edit'),
+				 	'icon' 	=> 'i13',
+				 	'text'	=> 'Edit Injury Consult'
+				 ),
+				 array
+				 (
+				 	'href' 	=> URL::route('opportunity-consult.edit'),
+				 	'icon' 	=> 'i14',
+				 	'text'	=> 'Edit Opportunity Consult'
+				 ),
+				 array
+				 (
+				 	'href' 	=> URL::route('proactive-consult.edit'),
+				 	'icon' 	=> 'i15',
+				 	'text'	=> 'Edit Proactive Consult'
+				 ),
+				 array
+				 (
+				 	'href' 	=> URL::route('reports.export'),
+				 	'icon' 	=> 'i16',
+				 	'text'	=> 'Export'
+				 ),
+			   );
+	}
 }

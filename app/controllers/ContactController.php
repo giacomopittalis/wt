@@ -14,6 +14,11 @@ class ContactController extends BaseController
 		return View::make('contact.form');
 	}
 
+	public function close()
+	{
+
+	}
+
 	public function store()
 	{
 		$contact_id = Input::get('contact_id');

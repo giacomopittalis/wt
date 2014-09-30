@@ -14,6 +14,11 @@ class HealthConsultController extends BaseController
 		return View::make('health-consult.form');
 	}
 
+	public function edit()
+	{
+		return View::make('health-consult.form');
+	}
+
 
 	//need add validation
 	public function store()

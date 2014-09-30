@@ -14,6 +14,11 @@ class InjuryConsultController extends BaseController
 		return View::make('injury-consult.form');
 	}
 
+	public function edit()
+	{
+		return View::make('injury-consult.form');
+	}
+
 
 	//need add validation
 	public function store()

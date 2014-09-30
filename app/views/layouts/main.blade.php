@@ -66,14 +66,13 @@
                 @endforeach
                 
                 <li class="sidebar-section">EDIT</li>
-                <li><a href="edit_employee.html"><span class="sidebar-icon i09"></span>Edit Employee</a></li>
-                <li><a href="delete_employee.html"><span class="sidebar-icon i10"></span>Delete Employee</a></li>
-                <li><a href="close_contact.html"><span class="sidebar-icon i11"></span>Close Contact</a></li>
-                <li><a href="edit_health_consult.html"><span class="sidebar-icon i12"></span>Edit Health Consult</a></li>
-                <li><a href="edit_injury_consult.html"><span class="sidebar-icon i13"></span>Edit Injury Consult</a></li>
-                <li><a href="edit_opportunity_consult.html"><span class="sidebar-icon i14"></span>Edit Opportunity Consult</a></li>
-                <li><a href="edit_proactive_consult.html"><span class="sidebar-icon i15"></span>Edit Proactive Consult</a></li>
-                <li><a href="data_export.html"><span class="sidebar-icon i16"></span>Export</a></li>
+                @foreach(AppHelper::getEditMenu() as $menu)
+                <li @if(Request::url() == $menu['href'])class="active"@endif>
+                    <a href="{{ $menu['href'] }}">
+                        <span class="sidebar-icon {{ $menu['icon'] }}"></span>{{ $menu['text'] }}
+                    </a>
+                </li>
+                @endforeach
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
