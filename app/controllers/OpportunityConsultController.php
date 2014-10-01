@@ -11,12 +11,12 @@ class OpportunityConsultController extends BaseController
 {
 	public function create()
 	{
-		return View::make('opportunity-consult.form');
+		return View::make('opportunity-consult.form',array('action' => 'create'));
 	}
 
 	public function edit()
 	{
-		return View::make('opportunity-consult.form');
+		return View::make('opportunity-consult.form',array('action'=>'edit'));
 	}
 
 

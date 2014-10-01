@@ -54,10 +54,19 @@ Route::group(array('before'=>'auth'), function()
 	Route::get('injury-consult/edit', array('as' => 'injury-consult.edit', 'uses' => 'InjuryConsultController@edit'));
 	Route::post('injury-consult/store', array('as' => 'injury-consult.store', 'uses' => 'InjuryConsultController@store'));
 
-	//Opportunity Consult
+	/** 
+	 * Opportunity Consult
+	 */
 	Route::get('opportunity-consult/create', array('as' => 'opportunity-consult.create', 'uses' => 'OpportunityConsultController@create'));
 	Route::get('opportunity-consult/edit', array('as' => 'opportunity-consult.edit', 'uses' => 'OpportunityConsultController@edit'));
 	Route::post('opportunity-consult/store', array('as' => 'opportunity-consult.store', 'uses' => 'OpportunityConsultController@store'));
+
+	/**
+	 * Opportunity AJAX Route
+	 **/
+	Route::get('opportunity-consult/ajax/get-opportunity-consult', array(
+																	'as' => 'opportunity-consult.ajax.get-opportunity-consult', 
+																	'uses' => 'OpportunityConsultController@ajaxGetData'));
 
 	//Proactive Consult
 	Route::get('proactive-consult/create', array('as' => 'proactive-consult.create', 'uses' => 'ProactiveConsultController@create'));

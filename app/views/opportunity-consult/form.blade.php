@@ -1,7 +1,11 @@
 @extends('layouts.main')
 
 @section('page-title')
+    @if($action == 'create')
 	New Opportunity Consult
+    @else
+    Edit Opportuniy Consult
+    @endif
 @stop
 
 @section('content')
@@ -16,7 +20,7 @@
                 <div class="col-sm-8">
                     <div class="row">
                         <div class="col-sm-12">
-                            <textarea name="comment"></textarea>
+                            <textarea name="comment" id="comment"></textarea>
                         </div>
                     </div>
                 </div>
