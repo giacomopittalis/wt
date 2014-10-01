@@ -31,7 +31,7 @@
         <nav class="navbar navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ URL::route('dashboard') }}">
                     <img src="{{ asset('assets/img/logo.png') }}">
                 </a>
             </div>
@@ -39,10 +39,16 @@
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
                     <img class="user-picture" src="{{ asset('assets/img/profile.png') }}">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="user-name">John Smith</span> <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i> <span class="user-name">{{ Sentry::getUser()->first_name }} {{ Sentry::getUser()->last_name }}</span> <b class="caret"></b>
+                    </a>
                     <ul class="dropdown-menu">
                         <li><a href="change_password.html"><i class="fa fa-fw fa-gear"></i> Change Password</a></li>
-                        <li><a href="login.html"><i class="fa fa-fw fa-power-off"></i> Log Out</a></li>
+                        <li>
+                            <a href="{{ URL::route('logout') }}">
+                                <i class="fa fa-fw fa-power-off"></i> Log Out
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -95,10 +101,8 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="{{ asset('assets/js/application.js') }}">
+    <script src="{{ asset('assets/js/application.js') }}"></script>
 
-    <!-- Menu Toggle Script -->
     <script type="text/javascript">
         $("#menu-toggle").click(function(e) 
         {

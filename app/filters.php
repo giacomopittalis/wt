@@ -35,7 +35,23 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (Auth::guest()) return Redirect::guest('login');
+	$url = (Input::get('url') != "" ? Input::get('url') : Request::url());
+
+	if($url == base_path())
+		$url = URL::route('dashboard');
+
+	//if (Auth::guest()) return Redirect::guest('login');
+	if (!Sentry::check())
+	{
+		Notification::error('You must login to access this site');
+		//return Redirect::to('user/login?next='.$url);
+		return Redirect::route('login',array('next' => $url));
+	}
+	//else
+	//{
+	//	$user = Sentry::getUser();
+	//	return Redirect::to('syncro-admin');
+	//}
 });
 
 
@@ -57,7 +73,14 @@ Route::filter('auth.basic', function()
 
 Route::filter('guest', function()
 {
-	if (Auth::check()) return Redirect::to('/');
+	$url = (Input::get('url') != "" ? Input::get('url') : Request::url());
+	//check user first
+	$user = Sentry::getUser();
+
+	if(Sentry::check())
+	{
+		return Redirect::route('dashboard');
+	}
 });
 
 /*

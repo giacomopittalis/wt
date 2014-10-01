@@ -72,8 +72,8 @@ ul{margin: 0;padding: 0;list-style: none}
     margin-bottom: 0;
     padding: 20px;
  }
- #login .form-group:nth-child(1){border-radius: 10px 10px 0 0;}
- #login .form-group:nth-child(2){border-radius: 0 0 10px 10px;border-top: none;}
+ #login .form-group:nth-child(2){border-radius: 10px 10px 0 0;}
+ #login .form-group:nth-child(3){border-radius: 0 0 10px 10px;border-top: none;}
  #login input[type="text"],#login input[type="password"]{
     border: none;
     box-shadow: none;
