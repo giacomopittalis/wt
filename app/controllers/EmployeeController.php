@@ -21,7 +21,7 @@ class EmployeeController extends BaseController
 
 	public function delete()
 	{
-		
+		return View::make('employee.delete');
 	}
 
 	public function store()
@@ -34,7 +34,6 @@ class EmployeeController extends BaseController
 		            'sex' 				=> array('required_if:sex,0'),
 		            'department' 		=> array('required'),
 		            'position' 			=> array('required'),
-		            'employee_number' 	=> array('required'),
 		            'hire_year' 		=> array('required_if:hire_year,0'),
 		            'health_plan'		=> array('required'),
 		            'client_id'			=> array('required_if:client_id,0'),
@@ -55,14 +54,15 @@ class EmployeeController extends BaseController
         	else
         	{
         		//validation fails
-	            //return Redirect::route('ngadmin.administration.services.edit',array($service_id))
-	            //			   ->withInput()
-	            //               ->withErrors($validator);
+	            return Redirect::route('employee.edit')
+	            			   ->withInput()
+	                           ->withErrors($validator);
         	}
         } 
         else 
         {
         	//upload file
+        	$employee_image = "";
         	if(Input::hasFile('identification'))
         	{
         		$destinationPath = public_path().'/uploads';
@@ -93,6 +93,9 @@ class EmployeeController extends BaseController
         		
         	}
 
+        	//dob
+        	$day = (substr(Input::get('dob_day'),1) == "0") ? substr(Input::get('dob_day'),1) : Input::get('dob_day');
+
         	if(Input::get('employee_id') == NULL)
         	{
         		Employee::create(array(
@@ -100,7 +103,7 @@ class EmployeeController extends BaseController
 			        				'middle_name'	=> Input::get('middle_name'),
 			        				'last_name'		=> Input::get('last_name'),
 			        				'sex'			=> Input::get('sex'),
-			        				'dob'			=> Input::get('dob_year').'-'.Input::get('dob_month').'-'.Input::get('dob_day'),
+			        				'dob'			=> Input::get('dob_year').'-'.Input::get('dob_month').'-'.$day,
 			        				'department'	=> Input::get('department'),
 			        				'position'		=> Input::get('position'),
 			        				'hire_year'		=> Input::get('hire_year'),
@@ -115,14 +118,35 @@ class EmployeeController extends BaseController
         	}
         	else
         	{
-        		$service = Service::find($service_id);
-        		$service->name = Input::get('service_name');
-        		$service->image = $service_image;
-        		$service->save();
+        		$emp = Employee::find($employee_id);
+        		$emp->first_name 	= Input::get('first_name');
+        		$emp->middle_name 	= Input::get('middle_name');
+        		$emp->last_name		= Input::get('last_name');
+        		$emp->sex 			= Input::get('sex');
+        		$emp->dob			= Input::get('dob_year').'-'.Input::get('dob_month').'-'.$day;
+			    $emp->department	= Input::get('department');
+			    $emp->position		= Input::get('position');
+			    $emp->hire_year		= Input::get('hire_year');
+			    $emp->hire_type		= Input::get('hire_type');
+			    $emp->health_plan 	= Input::get('health_plan');
+			    $emp->image 		= $employee_image;
+			    $emp->client_id 	= Input::get('client_id');
+			    $emp->location_id	= Input::get('location_id'); 
+        		$emp->save();
         		Notification::success('Employee updated successfully');
-        		return Redirect::route('employee.edit',array($employee_id));
+        		return Redirect::route('employee.edit');
         	}
         }
+	}
+
+	public function do_delete()
+	{
+		$emp = Employee::find(Input::get('employee_id'));
+		if($emp->delete())
+		{
+			Notification::success('Employee has been deleted');
+			return Redirect::route('employee.delete');
+		}
 	}
 
 	/**
@@ -153,5 +177,29 @@ class EmployeeController extends BaseController
 								'status' 	=> $status,
 								'buff' 		=> $employees 
 							  ));
+	}
+
+	public function ajaxGetInfo()
+	{
+		$employee = Employee::where('id',Input::get('id'))
+							->get()
+							->toArray();
+		if($employee)
+		{
+			$code = '200';
+			$status = 'success';
+		}
+		else
+		{
+			$code = '404';
+			$status = 'not found';
+		}
+
+		return Response::json(array(
+								'code' 		=> $code,
+								'status' 	=> $status,
+								'buff' 		=> $employee
+							  ));
+
 	}
 }

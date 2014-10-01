@@ -22,17 +22,27 @@ Route::group(array('before'=>'auth'), function()
 	Route::get('employee/create', array('as' => 'employee.create', 'uses' => 'EmployeeController@create'));
 	Route::get('employee/edit', array('as' => 'employee.edit', 'uses' => 'EmployeeController@edit'));
 	Route::get('employee/delete', array('as' => 'employee.delete', 'uses' => 'EmployeeController@delete'));
+	Route::post('employee/delete', array('as' => 'employee.do_delete', 'uses' => 'EmployeeController@do_delete'));
 	Route::post('employee/store', array('as' => 'employee.store', 'uses' => 'EmployeeController@store'));
 
 	/**
 	 * Employee's AJAX Route
 	 **/
 	Route::get('employee/ajax/get-employees', array('as' => 'employee.ajax.get-employees', 'uses' => 'EmployeeController@ajaxGetData'));
+	Route::get('employee/ajax/get-info', array('as' => 'employee.ajax.get-info', 'uses' => 'EmployeeController@ajaxGetInfo'));
 
-	//Contact
+	/**
+	 * Contact's AJAX Route
+	 **/
 	Route::get('contact/create', array('as' => 'contact.create', 'uses' => 'ContactController@create'));
 	Route::get('contact/close', array('as' => 'contact.close', 'uses' => 'ContactController@close'));
+	Route::post('contact/close', array('as' => 'contact.do_close', 'uses' => 'ContactController@do_close'));
 	Route::post('contact/store', array('as' => 'contact.store', 'uses' => 'ContactController@store'));
+
+	/**
+	 * Contact's AJAX Route
+	 **/
+	Route::get('contact/ajax/get-contacts', array('as' => 'contact.ajax.get-contact', 'uses' => 'ContactController@ajaxGetData'));
 
 	//Health Consult
 	Route::get('health-consult/create', array('as' => 'health-consult.create', 'uses' => 'HealthConsultController@create'));

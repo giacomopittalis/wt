@@ -1,7 +1,11 @@
 @extends('layouts.main')
 
 @section('page-title')
-	Create Employee
+    @if($action == 'create')
+	   Create Employee
+    @else
+       Edit Employee
+    @endif
 @stop
 
 @section('content')
@@ -54,15 +58,15 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label>Sex</label><br />
-                        {{ Form::select('sex',AppHelper::getSex()) }}
+                        {{ Form::select('sex',AppHelper::getSex(),'',array('id'=>'sex')) }}
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group birthdate">
                         <label>Date of Birth</label><br />
-                        {{ Form::select('dob_year',AppHelper::getYear()) }}
-                        {{ Form::select('dob_month',AppHelper::getMonth()) }}
-                        {{ Form::select('dob_day',AppHelper::getDay()) }}
+                        {{ Form::select('dob_year',AppHelper::getYear(),'',array('id'=>'dob_year')) }}
+                        {{ Form::select('dob_month',AppHelper::getMonth(),'',array('id'=>'dob_month')) }}
+                        {{ Form::select('dob_day',AppHelper::getDay(),'',array('id'=>'dob_day')) }}
                     </div>
                 </div>
             </div>
@@ -75,27 +79,27 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label>Department</label><br />
-                        {{ Form::text('department','',array('class' => 'form-control')) }}
+                        {{ Form::text('department','',array('class' => 'form-control','id'=>'department')) }}
                     </div>
                     <div class="form-group">
                         <label>Position</label><br />
-                        {{ Form::text('position','',array('class' => 'form-control')) }}
+                        {{ Form::text('position','',array('class' => 'form-control','id'=>'position')) }}
                     </div>
                     <div class="form-group">
                         <label>Employee Number</label><br />
-                        {{ Form::text('employee_number','',array('class' => 'form-control')) }}
+                        {{ Form::text('employee_number','',array('class' => 'form-control','id'=>'employee_number')) }}
                     </div>
                     <div class="form-group">
                         <label>Hire Year</label><br />
-                        {{ Form::select('hire_year',AppHelper::getYear(0,20,'Select Hire Year')) }}
+                        {{ Form::select('hire_year',AppHelper::getYear(0,20,'Select Hire Year'),'',array('id'=>'hire_year')) }}
                     </div>
                     <div class="form-group">
                         <label>Hire Type</label><br />
-                        {{ Form::select('hire_type',AppHelper::getHireType()) }}
+                        {{ Form::select('hire_type',AppHelper::getHireType(),'',array('id'=>'hire_type')) }}
                     </div>
                     <div class="form-group">
                         <label>Health Plan</label><br />
-                        {{ Form::text('health_plan','',array('class' => 'form-control')) }}
+                        {{ Form::text('health_plan','',array('class' => 'form-control','id'=>'health_plan')) }}
                 </div>
             </div>
         </div>
@@ -114,7 +118,7 @@
             </div>
         </div>
         <div class="submit-section">
-        	{{ Form::hidden('employee_id',(isset($employee->id) ? $employee->id : '')) }}
+        	{{ Form::hidden('employee_id',(isset($employee->id) ? $employee->id : ''),array('id'=>'employee_id')) }}
         	{{ Form::submit('Create',array('class' => 'btn btn-submit right')) }}
             <button type="button" class="btn btn-cancel right">Cancel</button>
             <div class="clear"></div>

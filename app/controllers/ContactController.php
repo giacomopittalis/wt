@@ -16,7 +16,7 @@ class ContactController extends BaseController
 
 	public function close()
 	{
-
+		return View::make('contact.close');
 	}
 
 	public function store()
@@ -84,5 +84,43 @@ class ContactController extends BaseController
         	}
         }
         */
+	}
+
+	public function do_close()
+	{
+		$contact = Contact::find(Input::get('contact_id'));
+		if($contact->delete())
+		{
+			Notification::success('Contact has been closed successfully');
+			return Redirect::route('contact.close');
+		}
+	}
+
+	/**
+	 * AJAX 
+	 **/
+	public function ajaxGetData()
+	{
+		$contact = Contact::where('client_id',Input::get('client_id'))
+						  ->where('location_id',Input::get('location_id'))
+						  ->get()
+						  ->toArray();
+
+		if(count($contact) > 0)
+		{
+			$code = '200';
+			$status = 'success';
+		}
+		else
+		{
+			$code = '404';
+			$status = 'not found';
+		}
+
+		return Response::json(array(
+								'code' 		=> $code,
+								'status' 	=> $status,
+								'buff' 		=> $contact 
+							  ));
 	}
 }

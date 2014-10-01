@@ -115,7 +115,15 @@ class AppHelper
 		$listArray[0] = 'Day';
 		for($i=1;$i<=31;$i++)
 		{
-			$listArray[$i] = $i;
+			if($i<10)
+			{
+				$ni = '0'.$i;
+			}
+			else
+			{
+				$ni = $i;
+			}
+			$listArray[$ni] = $i;
 		}
 		return $listArray;
 	}
