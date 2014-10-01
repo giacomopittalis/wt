@@ -20,25 +20,11 @@
 			@endforeach
 			</div>
 		@endif
-        <div class="form-section">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h3>Hierarchy</h3>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>Client</label><br />
-                        {{ Form::select('client_id',AppHelper::getClients()) }}
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>Location</label><br />
-                        {{ Form::select('location_id',AppHelper::getLocations()) }}
-                    </div>
-                </div>
-            </div>
-        </div>
+        @if($action == 'create')
+            @include('employee._partials.create-employee-hierarchy')
+        @else
+            @include('employee._partials.edit-employee-hierarchy')
+        @endif
         <div class="form-section">
             <div class="row">
                 <div class="col-sm-4">
@@ -47,15 +33,15 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label>First Name</label><br />
-                        {{ Form::text('first_name','',array('class' => 'form-control')) }}
+                        {{ Form::text('first_name','',array('class' => 'form-control', 'id' => 'first_name')) }}
                     </div>
                     <div class="form-group">
                         <label>Middle Name</label><br />
-                        {{ Form::text('middle_name','',array('class' => 'form-control')) }}
+                        {{ Form::text('middle_name','',array('class' => 'form-control', 'id' => 'middle_name')) }}
                     </div>
                     <div class="form-group">
                         <label>Last Name</label><br />
-                        {{ Form::text('last_name','',array('class' => 'form-control')) }}
+                        {{ Form::text('last_name','',array('class' => 'form-control', 'id' => 'last_name')) }}
                     </div>
                 </div>
             </div>

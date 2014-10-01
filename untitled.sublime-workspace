@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"emplo",
+				"employees"
+			],
+			[
+				"Employee",
+				"EmployeeController"
+			],
+			[
+				"location",
+				"location_id_employee"
+			],
+			[
+				"client",
+				"client_id_employee"
+			],
+			[
+				"oppo",
+				"Opportunity"
+			],
+			[
+				"opp",
+				"Opportunity"
+			],
+			[
+				"Dis",
+				"Disorders"
+			],
+			[
+				"Di",
+				"Disease"
+			],
+			[
+				"Contact",
+				"ContactController"
+			],
+			[
+				"employee",
+				"employee_image"
+			],
+			[
 				"date",
 				"date_range_start"
 			],
@@ -474,51 +514,60 @@
 			[
 				"vda",
 				"vdate1"
-			],
-			[
-				"date-range",
-				"date-range-datepicker"
-			],
-			[
-				"ui-state-d",
-				"ui-state-default"
-			],
-			[
-				"Re",
-				"RemindableInterface"
-			],
-			[
-				"c",
-				"credentials"
-			],
-			[
-				"getCount",
-				"getCountMessageByType"
-			],
-			[
-				"od",
-				"ordertype"
-			],
-			[
-				"univer",
-				"universalcode"
-			],
-			[
-				"universalcode",
-				"universalcode-instruction"
-			],
-			[
-				"wordpress",
-				"wordpresscode-instruction"
-			],
-			[
-				"footer",
-				"Footer"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/employee/form.blade.php",
+			"settings":
+			{
+				"buffer_size": 5070,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/EmployeeController.php",
+			"settings":
+			{
+				"buffer_size": 4648,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/employee/_partials/edit-employee-hierarchy.blade.php",
+			"settings":
+			{
+				"buffer_size": 1112,
+				"line_ending": "Unix",
+				"name": "<div class=\"form-section\">"
+			}
+		},
+		{
+			"file": "app/assets/js/app.js",
+			"settings":
+			{
+				"buffer_size": 1542,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/routes.php",
+			"settings":
+			{
+				"buffer_size": 3418,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/main.blade.php",
+			"settings":
+			{
+				"buffer_size": 4149,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -568,10 +617,102 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/andriansandi/Sites/welltrail"
+		"/Users/andriansandi/Sites/welltrail",
+		"/Users/andriansandi/Sites/welltrail/app",
+		"/Users/andriansandi/Sites/welltrail/app/assets",
+		"/Users/andriansandi/Sites/welltrail/app/assets/css",
+		"/Users/andriansandi/Sites/welltrail/app/assets/js",
+		"/Users/andriansandi/Sites/welltrail/app/config",
+		"/Users/andriansandi/Sites/welltrail/app/controllers",
+		"/Users/andriansandi/Sites/welltrail/app/database",
+		"/Users/andriansandi/Sites/welltrail/app/database/seeds",
+		"/Users/andriansandi/Sites/welltrail/app/helpers",
+		"/Users/andriansandi/Sites/welltrail/app/models",
+		"/Users/andriansandi/Sites/welltrail/app/start",
+		"/Users/andriansandi/Sites/welltrail/app/views",
+		"/Users/andriansandi/Sites/welltrail/app/views/contact",
+		"/Users/andriansandi/Sites/welltrail/app/views/employee",
+		"/Users/andriansandi/Sites/welltrail/app/views/employee/_partials",
+		"/Users/andriansandi/Sites/welltrail/app/views/health-consult",
+		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/_partials",
+		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult",
+		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/_partials",
+		"/Users/andriansandi/Sites/welltrail/app/views/layouts",
+		"/Users/andriansandi/Sites/welltrail/app/views/opportunity-consult",
+		"/Users/andriansandi/Sites/welltrail/app/views/partials",
+		"/Users/andriansandi/Sites/welltrail/app/views/partials/forms",
+		"/Users/andriansandi/Sites/welltrail/bower_components",
+		"/Users/andriansandi/Sites/welltrail/public",
+		"/Users/andriansandi/Sites/welltrail/public/assets",
+		"/Users/andriansandi/Sites/welltrail/public/assets/css",
+		"/Users/andriansandi/Sites/welltrail/public/assets/js"
 	],
 	"file_history":
 	[
+		"/Users/andriansandi/Sites/welltrail/Gruntfile.js",
+		"/Users/andriansandi/Sites/welltrail/app/views/employee/_partials/create-employee-hierarchy.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/ProactiveConsultController.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/EmployeeController.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/InjuryConsultController.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/OpportunityConsultController.php",
+		"/Users/andriansandi/Sites/welltrail/app/helpers/AppHelper.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/layouts/main.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/routes.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/HealthConsultController.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/ContactController.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/ReportsController.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/well-credit-consult/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/WellCreditConsultController.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/opportunity-consult/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/WellCreditConsult.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/ProactiveConsult.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/proactive-consult/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_30_111125_create_well_credit_consult_table.php",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_30_105935_create_proactive_consult_table.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/OpportunityConsult.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/_partials/client-information.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/_partials/notes.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/partials/forms/notes.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/partials/forms/client-information.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_30_104806_create_opportunity_consult_table.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/_partials/info.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/_partials/notes.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/HealthConsult.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/_partials/info.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_30_100350_create_injury_table.php",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_30_085247_create_health_consult_table.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/Contact.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/partials/notification.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/assets/js/app.js",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_30_022716_create_contacts_table.php",
+		"/Users/andriansandi/Sites/welltrail/app/assets/js/chart.js",
+		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/_partials/client-information.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/untitled.html",
+		"/Users/andriansandi/Sites/welltrail/app/views/contact/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/Employee.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/employee/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/Client.php",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_30_005504_create_employees_table.php",
+		"/Users/andriansandi/Sites/welltrail/app/config/packages/edvinaskrucas/notification/config.php",
+		"/Users/andriansandi/Sites/welltrail/app/assets/css/style.css",
+		"/Users/andriansandi/Sites/welltrail/public/assets/css/fonts.css",
+		"/Users/andriansandi/Sites/welltrail/app/database/seeds/DatabaseSeeder.php",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_29_180037_create_locations_table.php",
+		"/Users/andriansandi/Sites/welltrail/app/start/global.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/home/dashboard.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/HomeController.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/Location.php",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_29_174757_create_clients_table.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/html/create_employee.html",
+		"/Users/andriansandi/Sites/welltrail/app/assets/css/bootstrap.css",
+		"/Users/andriansandi/Sites/welltrail/public/assets/css/application.css",
+		"/Users/andriansandi/Sites/welltrail/public/assets/js/application.js",
+		"/Users/andriansandi/Sites/welltrail/app/config/app.php",
+		"/Users/andriansandi/Sites/welltrail/app/config/database.php",
+		"/Users/andriansandi/Sites/welltrail/package.json",
+		"/Users/andriansandi/Sites/welltrail/composer.json",
 		"/Users/andriansandi/Sites/syncro/public/js/syncro-v2.js",
 		"/Users/andriansandi/Sites/syncro/public/js/v2/embed-0.8.js",
 		"/Users/andriansandi/Sites/syncro/app/views/layout.blade.php",
@@ -635,75 +776,11 @@
 		"/Users/andriansandi/Sites/syncro/public/js/admin.js",
 		"/Users/andriansandi/Sites/syncro/app/controllers/admin/AdminLoginController.php",
 		"/Users/andriansandi/Sites/syncro/app/views/partials/_top-navigation-visitors.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/sites/partials/_list-table.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/controllers/admin/AdminController.php",
-		"/Users/andriansandi/Sites/syncro/app/views/settings/partials/_form.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/admin/user/login.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/user/register.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/statistics/realtime.blade.php",
-		"/Users/andriansandi/Sites/syncro/public/js/app.js",
-		"/Users/andriansandi/Sites/syncro/app/views/user/partials/_site-list.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/sites/groups/index.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/billings/index.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/billings/fb_invoice.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/message/partials/_message-details.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/message/view.blade.php",
-		"/Users/andriansandi/Sites/syncro/public/js/main.js",
-		"/Users/andriansandi/Downloads/e54c2193265886afiliate-2014_9_11.sql",
-		"/Users/andriansandi/Sites/syncro/app/controllers/FBWebhooksController.php",
-		"/Users/andriansandi/Sites/syncro/app/controllers/ajax/AjaxStatisticsController.php",
-		"/Users/andriansandi/Sites/syncro/app/controllers/MessageController.php",
-		"/Users/andriansandi/Sites/syncro/app/config/app.php",
-		"/Users/andriansandi/Sites/syncro/app/models/SiteActivities.php",
-		"/Users/andriansandi/Sites/syncro/app/views/widgets/index3.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/models/Message.php",
-		"/Users/andriansandi/Sites/syncro/app/models/SitesVisitorsYearly.php",
-		"/Users/andriansandi/Sites/syncro/app/models/VisitorsDaily.php",
-		"/Users/andriansandi/Sites/syncro/public/css/dashboard-styles.css",
-		"/Users/andriansandi/Sites/syncro/app/controllers/ajax/AjaxMessageController.php",
-		"/Users/andriansandi/Sites/syncro/app/views/user/dashboard-new.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/database/migrations/2014_09_04_152928_add_message_id_field_on_billing_lead_count_table.php",
-		"/Users/andriansandi/Sites/syncro/app/database/migrations/2014_08_11_124236_add_message_id_field_on_contact_requests_table.php",
-		"/Users/andriansandi/Sites/syncro/public/css/gumby.css",
-		"/Users/andriansandi/Sites/syncro/app/libraries/SiteHelper.php",
-		"/Users/andriansandi/Sites/syncro/app/controllers/BillingController.php",
-		"/Users/andriansandi/Sites/syncro/app/views/message/history.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/models/SitesCallHistory.php",
-		"/Users/andriansandi/Sites/syncro/app/models/VisitorsSummary.php",
-		"/Users/andriansandi/Sites/syncro/app/controllers/ajax/AjaxBillingController.php",
-		"/Users/andriansandi/Sites/syncro/app/models/Billing.php",
-		"/Users/andriansandi/Sites/syncro/public/js/syncro-gauge.js",
-		"/Users/andriansandi/Sites/syncro/app/models/Dog.php",
-		"/Users/andriansandi/Sites/syncro/app/models/Statistic.php",
-		"/Users/andriansandi/Sites/syncro/app/libraries/HumanDigit.php",
-		"/Users/andriansandi/Sites/syncro/public/js/controllers/statisticsController.js",
-		"/Users/andriansandi/Sites/syncro/public/css/stats-panel-styles.css",
-		"/Users/andriansandi/Sites/syncro/app/libraries/UserHelper.php",
-		"/Users/andriansandi/Sites/syncro/public/js/syncroApp.js",
-		"/Users/andriansandi/Sites/syncro/public/js/admin/site-create.js",
-		"/Users/andriansandi/Sites/syncro/public/js/syncro.js",
-		"/Users/andriansandi/Sites/syncro/public/js/angular.min.js",
-		"/Users/andriansandi/Sites/syncro/public/js/footable.js",
-		"/Users/andriansandi/Sites/syncro/public/js/syncro-v2.min.js",
-		"/Users/andriansandi/Sites/syncro/public/js/v2/embed.js",
-		"/Users/andriansandi/Sites/syncro/app/views/layout.blade.php.old",
-		"/Users/andriansandi/Sites/syncro/app/views/layout.blade.php.server",
-		"/Users/andriansandi/Sites/syncro/app/views/users.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/statistics/keyword-tracking.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/models/ContactRequest.php",
-		"/Users/andriansandi/Sites/syncro/app/controllers/WidgetController.php",
-		"/Users/andriansandi/Sites/syncro/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/display_subclass_tutorial.xml",
-		"/Users/andriansandi/Sites/syncro/vendor/predis/predis/examples/DispatcherLoop.php",
-		"/Users/andriansandi/Sites/syncro/app/models/DialogSummary.php",
-		"/Users/andriansandi/Sites/syncro-4.1/vendor/d11wtq/boris/lib/Boris/DumpInspector.php",
-		"/Users/andriansandi/Sites/syncro/public/sass/widgets-v3.scss",
-		"/Users/andriansandi/Sites/syncro/app/views/settings/chat_trigger.blade.php",
-		"/Users/andriansandi/Sites/syncro/public/js/libs/ui/gumby.checkbox.js",
-		"/Users/andriansandi/Sites/syncro/public/js/chat-trigger.js"
+		"/Users/andriansandi/Sites/syncro/app/views/sites/partials/_list-table.blade.php"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 33.0
 	},
 	"find_in_files":
 	{
@@ -717,6 +794,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"topic",
+			"Arimo",
+			"font",
 			"get_valid_domain",
 			"get_valid_domain()",
 			"domain",
@@ -841,10 +921,7 @@
 			"Input::get('email')",
 			"errors.403",
 			"create",
-			"2014-05-13 16:09:23",
-			"2014-05-13 16:04:23",
-			"$now->setTimezone('UTC')",
-			"$minsago->setTimezone('UTC')"
+			"2014-05-13 16:09:23"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -882,8 +959,190 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/employee/form.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5070,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1610,
+								1610
+							]
+						],
+						"settings":
+						{
+							"function_name_status_row": 43,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 63.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/EmployeeController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4183,
+								4183
+							]
+						],
+						"settings":
+						{
+							"function_name_status_row": 132,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1554.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/employee/_partials/edit-employee-hierarchy.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1112,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								662,
+								682
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<div class=\"form-section\">",
+							"function_name_status_row": 14,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1492,
+								1492
+							]
+						],
+						"settings":
+						{
+							"function_name_status_row": 64,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 354.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1134,
+								1134
+							]
+						],
+						"settings":
+						{
+							"function_name_status_row": 27,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/layouts/main.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4132,
+								4132
+							]
+						],
+						"settings":
+						{
+							"function_name_status_row": 107,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 969.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -960,7 +1219,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 223.0,
+	"side_bar_width": 139.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

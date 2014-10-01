@@ -11,12 +11,12 @@ class EmployeeController extends BaseController
 
 	public function create()
 	{
-		return View::make('employee.form');
+		return View::make('employee.form', array('action' => 'create'));
 	}
 
 	public function edit()
 	{
-		return View::make('employee.form');
+		return View::make('employee.form', array('action' => 'edit'));
 	}
 
 	public function delete()
@@ -123,5 +123,35 @@ class EmployeeController extends BaseController
         		return Redirect::route('employee.edit',array($employee_id));
         	}
         }
+	}
+
+	/**
+	 * AJAX 
+	 **/
+	public function ajaxGetData()
+	{
+		$employees = Employee::select('id','first_name','middle_name','last_name')
+							 ->where('client_id',Input::get('client_id'))
+							 ->where('location_id', Input::get('location_id'))
+							 ->orderBy('first_name','ASC')
+							 ->get()
+							 ->toArray();
+
+		if(count($employees) > 0)
+		{
+			$code = '200';
+			$status = 'success';
+		}
+		else
+		{
+			$code = '404';
+			$status = 'not found';
+		}
+
+		return Response::json(array(
+								'code' 		=> $code,
+								'status' 	=> $status,
+								'buff' 		=> $employees 
+							  ));
 	}
 }
