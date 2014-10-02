@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Welltrail | Dashboard</title>
+    <title>Welltrail | {{ isset($page_title) ? $page_title : 'Dashboard' }}</title>
 
     <link href="{{ asset('assets/css/fonts.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/application.css') }}" rel="stylesheet">

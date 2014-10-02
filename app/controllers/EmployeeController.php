@@ -9,13 +9,20 @@
 class EmployeeController extends BaseController 
 {
 
+	public function __construct()
+	{
+
+	}
+
 	public function create()
 	{
+		View::share('page_title', 'Create Employee');
 		return View::make('employee.form', array('action' => 'create'));
 	}
 
 	public function edit()
 	{
+		View::share('page_title', 'Edit Employee');
 		return View::make('employee.form', array('action' => 'edit'));
 	}
 
@@ -31,13 +38,13 @@ class EmployeeController extends BaseController
 		$rules = array(
 		            'first_name' 		=> array('required'),
 		            'last_name' 		=> array('required'),
-		            'sex' 				=> array('required_if:sex,0'),
+		            'sex' 				=> array('not_in:0'),
 		            'department' 		=> array('required'),
 		            'position' 			=> array('required'),
-		            'hire_year' 		=> array('required_if:hire_year,0'),
+		            'hire_year' 		=> array('not_in:0'),
 		            'health_plan'		=> array('required'),
-		            'client_id'			=> array('required_if:client_id,0'),
-		            'location_id'		=> array('required_if:location_id,0')
+		            'client_id'			=> array('not_in:0'),
+		            'location_id'		=> array('not_in:0')
 		         );
 
         $validator = Validator::make(Input::all(), $rules);
@@ -113,7 +120,7 @@ class EmployeeController extends BaseController
 			        				'client_id' 	=> Input::get('client_id'),
 			        				'location_id'	=> Input::get('location_id')
 		        			   ));
-           		Notification::success('Employee created successfully');
+           		Notification::success('Employee created successfully. You can later access/preview it here');
            		return Redirect::route('employee.create');
         	}
         	else
@@ -133,7 +140,7 @@ class EmployeeController extends BaseController
 			    $emp->client_id 	= Input::get('client_id');
 			    $emp->location_id	= Input::get('location_id'); 
         		$emp->save();
-        		Notification::success('Employee updated successfully');
+        		Notification::success('Employee updated successfully. You can later access/preview it here');
         		return Redirect::route('employee.edit');
         	}
         }

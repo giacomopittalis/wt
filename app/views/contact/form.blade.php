@@ -16,36 +16,41 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Client</label><br>
+                                <label>Client <span class="text-danger">*</span></label><br>
                                 {{ Form::select('client_id',AppHelper::getClients()) }}
+                                @include('partials.error-message',array('field' => 'client_id'))
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Location</label><br>
+                                <label>Location <span class="text-danger">*</span></label><br>
                                 {{ Form::select('location_id',AppHelper::getLocations()) }}
+                                @include('partials.error-message',array('field' => 'location_id'))
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Select Mode</label><br>
-                                {{ Form::select('mode',AppHelper::getContactMode()) }}  
+                                <label>Select Mode <span class="text-danger">*</span></label><br>
+                                {{ Form::select('mode',AppHelper::getContactMode()) }} 
+                                @include('partials.error-message',array('field' => 'mode')) 
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Contact Method</label><br>
+                                <label>Contact Method <span class="text-danger">*</span></label><br>
                                 {{ Form::select('method',AppHelper::getContactMethod()) }}  
+                                @include('partials.error-message',array('field' => 'method'))
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Employee</label><br>
+                                <label>Employee <span class="text-danger">*</span></label><br>
                                 {{ Form::select('employee_id',AppHelper::getEmployees()) }}  
+                                @include('partials.error-message',array('field' => 'employee_id'))
                             </div>
                         </div>
                         <div class="col-sm-6">

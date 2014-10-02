@@ -1,23 +1,24 @@
 /**
- * Opportunity Script
+ * Proactive Consult Script
  *
  * @author		Sandi Andrian
- * @since 		Oct 1, 2014
+ * @since 		Oct 2, 2014
  **/
 $(function()
 {
 
-	$('#contact_id_opportunity').change(function()
+	$('#contact_id_health').change(function()
 	{	
-		OpportunityConsult.client_id  = $('#client_id').val();
-		OpportunityConsult.location_id = $('#location_id').val(); 
-		OpportunityConsult.contact_id = $(this).val();
-		OpportunityConsult.getData();
+		HealthConsult.client_id  = $('#client_id').val();
+		HealthConsult.location_id = $('#location_id').val(); 
+		HealthConsult.contact_id = $(this).val();
+		HealthConsult.getData();
+		$('input[name="id"]').val($(this).val());
 	});
 
-	var OpportunityConsult = new function()
+	var HealthConsult = new function()
 	{
-		this.url		  = '/opportunity-consult/ajax/get-opportunity-consult';
+		this.url		  = '/health-consult/ajax/get-health-consult';
 		this.client_id 	  = 0;
 		this.location_id  = 0;
 		this.contact_id   = 0;
@@ -52,14 +53,18 @@ $(function()
 							{
 								$("#under_medical_care").prop('checked',true);
 							}
-							$('#comment').val(oResp.buff[idx].comment);
+
+							//comment
+							var comment = JSON.parse(oResp.buff[idx].comment);
+							//console.log('COMMENT: ' + comment.comment_type);
+							$('#type').val(comment.type);
+							$('#comment').val(comment.comment);
 
 							if(oResp.buff[idx].follow_up == 1)
 							{
 								$("#follow_up").prop('checked',true);
 							}
 							$('#notes').val(oResp.buff[idx].notes);
-							$('input[name="id"]').val(oResp.buff[idx].id);
 				        });
 				       
 					}

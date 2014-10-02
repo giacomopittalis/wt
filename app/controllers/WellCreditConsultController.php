@@ -11,6 +11,7 @@ class WellCreditConsultController extends BaseController
 {
 	public function create()
 	{
+		View::share('page_title','New Well Credit Consult');
 		return View::make('well-credit-consult.form');
 	}
 
@@ -18,16 +19,32 @@ class WellCreditConsultController extends BaseController
 	//need add validation
 	public function store()
 	{
-		$health_consult_id = Input::get('health_consult_id');
+		$rules = array(
+		            'client_id'			=> array('not_in:0'),
+		            'location_id'		=> array('not_in:0'),
+		            'contact_id' 		=> array('not_in:0'),
+		         );
 
-		WellCreditConsult::create(array(
-								'client_id'				=> Input::get('client_id'),
-								'location_id'			=> Input::get('location_id'),
-								'employee_id'			=> Input::get('employee_id'),
-								'under_medical_care'	=> Input::get('under_medical_care'),
-								'comment'				=> implode(',',Input::get('comment'))
-							  ));
-		Notification::success('Well Credit Consult created successfully');
-		return Redirect::route('well-credit-consult.create');
+        $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails()) 
+        {
+			//validation fails
+            return Redirect::route('well-credit-consult.create')
+            			   ->withInput()
+                           ->withErrors($validator);
+        }
+        else
+        {
+			WellCreditConsult::create(array(
+									'client_id'				=> Input::get('client_id'),
+									'location_id'			=> Input::get('location_id'),
+									'employee_id'			=> Input::get('contact_id'),
+									'under_medical_care'	=> Input::get('under_medical_care'),
+									'comment'				=> (Input::get('comment') != "") ? implode(',',Input::get('comment')) : ''
+								  ));
+			Notification::success('Well Credit Consult created successfully');
+			return Redirect::route('well-credit-consult.create');
+		}
 	}
 }

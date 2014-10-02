@@ -9,20 +9,35 @@ $(function()
 
 	$('#client_id').change(function()
 	{
-		Contact.client_id = $(this).val();
+		var client_id = $(this).val();
+		if(client_id != 0)
+		{
+			$(this).nextAll().remove();
+		}
+		Contact.client_id = client_id;
 		Contact.getData();
 	});
 
 	$('#location_id').change(function()
 	{
-		Contact.location_id = $(this).val();
+		var location_id = $(this).val();
+		if(location_id != 0)
+		{
+			$(this).nextAll().remove();
+		}
+		Contact.location_id = location_id;
 		Contact.getData();
 		//alert('Halo!');
 	});
 
 	$('#contact_id').change(function()
 	{
-		$('input[name="health_consult_id"]').val($(this).val());
+		var contact_id = $(this).val();
+		if(contact_id != 0)
+		{
+			$(this).nextAll().remove();
+		}
+		$('input[name="health_consult_id"]').val(contact_id);
 	});
 
 	var Contact = new function()
@@ -61,7 +76,7 @@ $(function()
 						
 						$.each(oResp.buff, function(idx) 
 						{
-							rtn += '<option value="'+oResp.buff[idx].id+'">Contact #'+oResp.buff[idx].id+'</option>';
+							rtn += '<option value="'+oResp.buff[idx].id+'">#'+oResp.buff[idx].id+' '+oResp.buff[idx].first_name+' '+oResp.buff[idx].last_name + '</option>';
 				        });
 				        $('select[name="contact_id"]').empty()
 				        			    			  .html(rtn);

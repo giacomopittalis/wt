@@ -10,20 +10,7 @@
 
 @section('content')
 	{{ Form::open(array('route' => 'employee.store','id' => 'create-employee', 'files' => true)) }}
-		{{ Notification::showAll() }}
-		@if($errors->all())
-			<div class="form-section">
-			@foreach($errors->all() as $message)
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="alert alert-danger" role="alert">
-					    	{{ $message }}
-					    </div>
-					</div>
-				</div>
-			@endforeach
-			</div>
-		@endif
+		@include('partials.notification')
         @if($action == 'create')
             @include('employee._partials.create-employee-hierarchy')
         @else
@@ -36,16 +23,18 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <label>First Name</label><br />
+                        <label>First Name <span class="text-danger">*</span></label><br />
                         {{ Form::text('first_name','',array('class' => 'form-control', 'id' => 'first_name')) }}
+                        @include('partials.error-message',array('field' => 'first_name'))
                     </div>
                     <div class="form-group">
                         <label>Middle Name</label><br />
                         {{ Form::text('middle_name','',array('class' => 'form-control', 'id' => 'middle_name')) }}
                     </div>
                     <div class="form-group">
-                        <label>Last Name</label><br />
+                        <label>Last Name <span class="text-danger">*</span></label><br />
                         {{ Form::text('last_name','',array('class' => 'form-control', 'id' => 'last_name')) }}
+                        @include('partials.error-message',array('field' => 'last_name'))
                     </div>
                 </div>
             </div>
@@ -57,8 +46,9 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <label>Sex</label><br />
+                        <label>Sex <span class="text-danger">*</span></label><br />
                         {{ Form::select('sex',AppHelper::getSex(),'',array('id'=>'sex')) }}
+                        @include('partials.error-message',array('field' => 'sex'))
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -78,28 +68,32 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <label>Department</label><br />
+                        <label>Department <span class="text-danger">*</span></label><br />
                         {{ Form::text('department','',array('class' => 'form-control','id'=>'department')) }}
+                        @include('partials.error-message',array('field' => 'department'))
                     </div>
                     <div class="form-group">
-                        <label>Position</label><br />
+                        <label>Position <span class="text-danger">*</span></label><br />
                         {{ Form::text('position','',array('class' => 'form-control','id'=>'position')) }}
+                        @include('partials.error-message',array('field' => 'position'))
                     </div>
                     <div class="form-group">
                         <label>Employee Number</label><br />
                         {{ Form::text('employee_number','',array('class' => 'form-control','id'=>'employee_number')) }}
                     </div>
                     <div class="form-group">
-                        <label>Hire Year</label><br />
+                        <label>Hire Year <span class="text-danger">*</span></label><br />
                         {{ Form::select('hire_year',AppHelper::getYear(0,20,'Select Hire Year'),'',array('id'=>'hire_year')) }}
                     </div>
                     <div class="form-group">
                         <label>Hire Type</label><br />
                         {{ Form::select('hire_type',AppHelper::getHireType(),'',array('id'=>'hire_type')) }}
+                        @include('partials.error-message',array('field' => 'hire_type'))
                     </div>
                     <div class="form-group">
                         <label>Health Plan</label><br />
                         {{ Form::text('health_plan','',array('class' => 'form-control','id'=>'health_plan')) }}
+                        @include('partials.error-message',array('field' => 'health_plan'))
                 </div>
             </div>
         </div>
@@ -119,7 +113,7 @@
         </div>
         <div class="submit-section">
         	{{ Form::hidden('employee_id',(isset($employee->id) ? $employee->id : ''),array('id'=>'employee_id')) }}
-        	{{ Form::submit('Create',array('class' => 'btn btn-submit right')) }}
+        	{{ Form::submit(ucfirst($action),array('class' => 'btn btn-submit right')) }}
             <button type="button" class="btn btn-cancel right">Cancel</button>
             <div class="clear"></div>
         </div>

@@ -1,4 +1,5 @@
 {{ Notification::showAll() }}
+<!--
 @if($errors->all())
 	<div class="form-section">
 	@foreach($errors->all() as $message)
@@ -12,3 +13,4 @@
 	@endforeach
 	</div>
 @endif
+-->

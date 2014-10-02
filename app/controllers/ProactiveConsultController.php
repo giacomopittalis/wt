@@ -25,36 +25,64 @@ class ProactiveConsultController extends BaseController
 	{
 		$id = Input::get('id');
 
-		if($id == null)
-		{
-			ProactiveConsult::create(array(
-									'client_id'				=> Input::get('client_id'),
-									'location_id'			=> Input::get('location_id'),
-									'employee_id'			=> Input::get('employee_id'),
-									'under_medical_care'	=> Input::get('under_medical_care'),
-									'comment'				=> json_encode(array(
-																			'type' 		=> Input::get('type'),
-																			'comment'	=> Input::get('comment')
-																		  )),
-									'follow_up'				=> Input::get('follow_up'),
-									'notes'					=> Input::get('notes')
-								  ));
-			Notification::success('Proactive Consult created successfully');
-			return Redirect::route('proactive-consult.create');
-		}
-		else
-		{
-			$pc = ProactiveConsult::find($id);
-			$pc->under_medical_care	= Input::get('under_medical_care');
-			$pc->comment 			= json_encode(array(
-													'type' 		=> Input::get('type'),
-													'comment'	=> Input::get('comment')
-												  ));
-			$pc->follow_up			= Input::get('follow_up');
-			$pc->notes				= Input::get('notes');
-			$pc->save();
-			Notification::success('Proactive Consult updated successfully');
-			return Redirect::route('proactive-consult.edit');
+		$rules = array(
+		            'client_id'			=> array('not_in:0'),
+		            'location_id'		=> array('not_in:0'),
+		            'contact_id' 		=> array('not_in:0'),
+		         );
+
+        $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails()) 
+        {
+        	if($id == null)
+			{
+				//validation fails
+	            return Redirect::route('proactive-consult.create')
+	            			   ->withInput()
+	                           ->withErrors($validator);
+			}
+			else
+			{
+				//validation fails
+	            return Redirect::route('proactive-consult.edit')
+	            			   ->withInput()
+	                           ->withErrors($validator);
+			}
+        }
+        else
+        {
+			if($id == null)
+			{
+				ProactiveConsult::create(array(
+										'client_id'				=> Input::get('client_id'),
+										'location_id'			=> Input::get('location_id'),
+										'employee_id'			=> Input::get('contact_id'),
+										'under_medical_care'	=> Input::get('under_medical_care'),
+										'comment'				=> json_encode(array(
+																				'type' 		=> Input::get('type'),
+																				'comment'	=> Input::get('comment')
+																			  )),
+										'follow_up'				=> Input::get('follow_up'),
+										'notes'					=> Input::get('notes')
+									  ));
+				Notification::success('Proactive Consult created successfully');
+				return Redirect::route('proactive-consult.create');
+			}
+			else
+			{
+				$pc = ProactiveConsult::find($id);
+				$pc->under_medical_care	= Input::get('under_medical_care');
+				$pc->comment 			= json_encode(array(
+														'type' 		=> Input::get('type'),
+														'comment'	=> Input::get('comment')
+													  ));
+				$pc->follow_up			= Input::get('follow_up');
+				$pc->notes				= Input::get('notes');
+				$pc->save();
+				Notification::success('Proactive Consult updated successfully');
+				return Redirect::route('proactive-consult.edit');
+			}
 		}
 	}
 

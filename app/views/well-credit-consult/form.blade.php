@@ -16,22 +16,25 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Client</label><br>
-                                {{ Form::select('client_id',AppHelper::getClients()) }}
+                                <label>Client <span class="text-danger">*</span></label><br>
+                                {{ Form::select('client_id',AppHelper::getClients(),'',array('id'=>'client_id')) }}
+                                @include('partials.error-message',array('field' => 'client_id'))
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Location</label><br>
-                                {{ Form::select('location_id',AppHelper::getLocations()) }}
+                                <label>Location <span class="text-danger">*</span></label><br>
+                                {{ Form::select('location_id',AppHelper::getLocations(),'',array('id' => 'location_id')) }}
+                                @include('partials.error-message',array('field' => 'location_id'))
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Contact ID</label><br>
-                                {{ Form::select('employee_id',AppHelper::getEmployees('Select Contact ID')) }}
+                                <label>Contact ID <span class="text-danger">*</span></label><br>
+                                {{ Form::select('contact_id',array('Select Contact ID'),'',array('id' => 'contact_id')) }}
+                                @include('partials.error-message',array('field' => 'contact_id'))
                             </div>
                         </div>
                     </div>
@@ -43,7 +46,7 @@
             </div>
         </div>
         <div class="submit-section">
-        	{{ Form::hidden('health_consult_id',(isset($health_consult->id) ? $health_consult->id : '')) }}
+        	{{ Form::hidden('id','') }}
         	{{ Form::submit('Create',array('class' => 'btn btn-submit right')) }}
             <button type="button" class="btn btn-cancel right">Cancel</button>
             <div class="clear"></div>

@@ -49,6 +49,13 @@ Route::group(array('before'=>'auth'), function()
 	Route::get('health-consult/edit', array('as' => 'health-consult.edit', 'uses' => 'HealthConsultController@edit'));
 	Route::post('health-consult/store', array('as' => 'health-consult.store', 'uses' => 'HealthConsultController@store'));
 
+	/**
+	 * Health AJAX Route
+	 **/
+	Route::get('health-consult/ajax/get-health-consult', array(
+																'as' => 'health-consult.ajax.get-health-consult', 
+																'uses' => 'HealthConsultController@ajaxGetData'));
+
 	//Injury Consult
 	Route::get('injury-consult/create', array('as' => 'injury-consult.create', 'uses' => 'InjuryConsultController@create'));
 	Route::get('injury-consult/edit', array('as' => 'injury-consult.edit', 'uses' => 'InjuryConsultController@edit'));

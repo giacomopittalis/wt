@@ -10,7 +10,7 @@
         @include('employee._partials.edit-employee-hierarchy')
         <div class="submit-section">
         	{{ Form::hidden('employee_id',(isset($employee->id) ? $employee->id : ''),array('id'=>'employee_id')) }}
-        	{{ Form::submit('Create',array('class' => 'btn btn-submit right')) }}
+        	{{ Form::submit('Delete',array('class' => 'btn btn-delete right')) }}
             <button type="button" class="btn btn-cancel right">Cancel</button>
             <div class="clear"></div>
         </div>
