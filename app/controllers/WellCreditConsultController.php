@@ -43,6 +43,13 @@ class WellCreditConsultController extends BaseController
 									'under_medical_care'	=> Input::get('under_medical_care'),
 									'comment'				=> (Input::get('comment') != "") ? implode(',',Input::get('comment')) : ''
 								  ));
+			//save activity to Feeds
+    		Feed::create(array(
+    						'user_id' 	=> Sentry::getUser()->id,
+    						'ftype' 	=> 'create',
+    						'fcomment' 	=> 'created new Well Credit Consult'
+    					 ));
+
 			Notification::success('Well Credit Consult created successfully');
 			return Redirect::route('well-credit-consult.create');
 		}

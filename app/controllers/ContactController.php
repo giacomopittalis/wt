@@ -11,11 +11,13 @@ class ContactController extends BaseController
 {
 	public function create()
 	{
+		View::share('page_title', 'Create Contact');
 		return View::make('contact.form');
 	}
 
 	public function close()
 	{
+		View::share('page_title', 'Close Contact');
 		return View::make('contact.close');
 	}
 
@@ -51,7 +53,14 @@ class ContactController extends BaseController
 		        				'location_id'	=> Input::get('location_id'),
 		        				'employee_id' 	=> Input::get('employee_id')
 	        			   ));
-       		Notification::success('Contact created successfully. You can later access/preview it here');
+    		//save activity to Feeds
+    		Feed::create(array(
+    						'user_id' 	=> Sentry::getUser()->id,
+    						'ftype' 	=> 'create',
+    						'fcomment' 	=> 'create new Contact'
+    					 ));
+
+       		Notification::success('Contact created successfully.');
        		return Redirect::route('contact.create');
         }
 	}
@@ -61,6 +70,13 @@ class ContactController extends BaseController
 		$contact = Contact::find(Input::get('contact_id'));
 		if($contact->delete())
 		{
+			//save activity to Feeds
+    		Feed::create(array(
+    						'user_id' 	=> Sentry::getUser()->id,
+    						'ftype' 	=> 'delete',
+    						'fcomment' 	=> 'closed the Contact #'.$contact->id
+    					 ));
+
 			Notification::success('Contact has been closed successfully');
 			return Redirect::route('contact.close');
 		}

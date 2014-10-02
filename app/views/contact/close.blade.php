@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="submit-section">
-        	{{ Form::hidden('contact_id',(isset($contact->id) ? $contact->id : '')) }}
+        	{{ Form::hidden('id','') }}
         	{{ Form::submit('Close',array('class' => 'btn btn-delete right')) }}
             <button type="button" class="btn btn-cancel right">Cancel</button>
             <div class="clear"></div>

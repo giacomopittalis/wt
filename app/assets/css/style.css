@@ -300,9 +300,9 @@ ul{margin: 0;padding: 0;list-style: none}
     top: 21px;
     left: 29px;
 }
-.activities .activity.added:before{background: #d4f687}
-.activities .activity.edited:before{background: #f6d387}
-.activities .activity.deleted:before{background: #f47c7c}
+.activities .activity.create:before{background: #d4f687}
+.activities .activity.edit:before{background: #f6d387}
+.activities .activity.delete:before{background: #f47c7c}
 .activities .description{
     padding: 20px 25px;
     font-size: 12px;
@@ -322,12 +322,16 @@ ul{margin: 0;padding: 0;list-style: none}
     right: 0;
 }
 .load-more{
-    color: #8dc525;
-    font-weight: bold;
-    font-size: 12px;
     text-align: center;
     padding: 20px;
     cursor: pointer;
+}
+
+.load-more a
+{
+    color: #8dc525;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 /* Data Report */

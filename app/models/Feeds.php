@@ -10,4 +10,7 @@
  class Feed extends Eloquent
  {
  	protected $table = "feeds";
+ 	protected $fillable = array("user_id",
+ 								"ftype",
+ 								"fcomment");
  }

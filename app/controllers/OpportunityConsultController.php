@@ -65,7 +65,13 @@ class OpportunityConsultController extends BaseController
 									'follow_up'				=> Input::get('follow_up'),
 									'notes'					=> Input::get('notes')
 								  ));
-				Notification::success('Opportunity Consult created successfully. You can later access/preview it here');
+				//save activity to Feeds
+    			Feed::create(array(
+    						'user_id' 	=> Sentry::getUser()->id,
+    						'ftype' 	=> 'create',
+    						'fcomment' 	=> 'create new Opportunity Consult'
+    					 ));
+				Notification::success('Opportunity Consult created successfully. <a href="'.URL::route('opportunity-consult.edit').'">You can later access/preview it here</a>');
 				return Redirect::route('opportunity-consult.create');
 			}
 			else
@@ -77,7 +83,14 @@ class OpportunityConsultController extends BaseController
 				$oc->notes 				= Input::get('notes');
 				$oc->save(); 
 
-				Notification::success('Opportunity Consult updated successfully. You can later access/preview it here');
+				//save activity to Feeds
+    			Feed::create(array(
+	    						'user_id' 	=> Sentry::getUser()->id,
+	    						'ftype' 	=> 'edit',
+	    						'fcomment' 	=> 'edited the Opportunity Consult #'.$oc->id
+	    					 ));
+
+				Notification::success('Opportunity Consult updated successfully. <a href="'.URL::route('opportunity-consult.edit').'">You can later access/preview it here</a>');
 				return Redirect::route('opportunity-consult.edit');
 			}
 		}

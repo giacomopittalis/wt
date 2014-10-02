@@ -67,7 +67,13 @@ class HealthConsultController extends BaseController
 										'follow_up'				=> Input::get('follow_up'),
 										'notes'					=> Input::get('notes')
 									  ));
-				Notification::success('Health Consult created successfully. You can later access/preview it here');
+				//save activity to Feeds
+    			Feed::create(array(
+	    						'user_id' 	=> Sentry::getUser()->id,
+	    						'ftype' 	=> 'create',
+	    						'fcomment' 	=> 'create new Health Consult'
+	    					 ));
+				Notification::success('Health Consult created successfully. <a href="'.URL::route('health-consult.edit').'">You can later access/preview it here</a>');
 				return Redirect::route('health-consult.create');
 			}
 			else

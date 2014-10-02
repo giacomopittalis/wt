@@ -11,11 +11,13 @@ class ProactiveConsultController extends BaseController
 {
 	public function create()
 	{
+		View::share('page_title', 'Create Proactive Consult');
 		return View::make('proactive-consult.form',array('action'=>'create'));
 	}
 
 	public function edit()
 	{
+		View::share('page_title', 'Edit Proactive Consult');
 		return View::make('proactive-consult.form',array('action'=>'edit'));
 	}
 
@@ -66,7 +68,14 @@ class ProactiveConsultController extends BaseController
 										'follow_up'				=> Input::get('follow_up'),
 										'notes'					=> Input::get('notes')
 									  ));
-				Notification::success('Proactive Consult created successfully');
+				//save activity to Feeds
+    			Feed::create(array(
+    						'user_id' 	=> Sentry::getUser()->id,
+    						'ftype' 	=> 'create',
+    						'fcomment' 	=> 'creted new Proactive Consult'
+    					 ));
+
+				Notification::success('Proactive Consult created successfully. <a href="'.URL::route('proactive-consult.edit').'">You can later access/preview it here</a>');
 				return Redirect::route('proactive-consult.create');
 			}
 			else
@@ -80,7 +89,14 @@ class ProactiveConsultController extends BaseController
 				$pc->follow_up			= Input::get('follow_up');
 				$pc->notes				= Input::get('notes');
 				$pc->save();
-				Notification::success('Proactive Consult updated successfully');
+
+				//save activity to Feeds
+    			Feed::create(array(
+	    						'user_id' 	=> Sentry::getUser()->id,
+	    						'ftype' 	=> 'edit',
+	    						'fcomment' 	=> 'edited the Proactive Consult #'.$pc->id
+	    					 ));
+				Notification::success('Proactive Consult updated successfully. <a href="'.URL::route('proactive-consult.edit').'">You can later access/preview it here</a>');
 				return Redirect::route('proactive-consult.edit');
 			}
 		}

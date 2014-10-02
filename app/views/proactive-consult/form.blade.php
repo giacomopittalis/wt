@@ -41,7 +41,11 @@
         @include('partials.forms.notes')
         <div class="submit-section">
         	{{ Form::hidden('id','') }}
-        	{{ Form::submit(ucfirst($action),array('class' => 'btn btn-submit right')) }}
+        	@if($action == 'edit')
+                {{ Form::submit('Save',array('class' => 'btn btn-submit right')) }}
+            @else
+                {{ Form::submit(ucfirst($action),array('class' => 'btn btn-submit right')) }}
+            @endif
             <button type="button" class="btn btn-cancel right">Cancel</button>
             <div class="clear"></div>
         </div>

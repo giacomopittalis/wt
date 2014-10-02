@@ -38,7 +38,7 @@ class InjuryConsultController extends BaseController
 									'follow_up'				=> Input::get('follow_up'),
 									'notes'					=> Input::get('notes')
 								  ));
-			Notification::success('Health Consult created successfully');
+			Notification::success('Health Consult created successfully. <a href="'.URL::route('injury-consult.edit').'">You can later access/preview it here</a>');
 			return Redirect::route('health-consult.create');
 		}
 		else

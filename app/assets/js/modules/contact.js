@@ -37,7 +37,7 @@ $(function()
 		{
 			$(this).nextAll().remove();
 		}
-		$('input[name="health_consult_id"]').val(contact_id);
+		$('input[name="id"]').val(contact_id);
 	});
 
 	var Contact = new function()

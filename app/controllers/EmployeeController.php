@@ -28,6 +28,7 @@ class EmployeeController extends BaseController
 
 	public function delete()
 	{
+		View::share('page_title', 'Delete Employee');
 		return View::make('employee.delete');
 	}
 
@@ -102,6 +103,14 @@ class EmployeeController extends BaseController
 
         	//dob
         	$day = (substr(Input::get('dob_day'),1) == "0") ? substr(Input::get('dob_day'),1) : Input::get('dob_day');
+        	if(Input::get('dob_year') != 0 && Input::get('dob_month') != 0 && $day)
+        	{
+        		$dob = Input::get('dob_year').'-'.Input::get('dob_month').'-'.$day;
+        	}
+        	else 
+        	{
+        		$dob = NULL;
+        	}
 
         	if(Input::get('employee_id') == NULL)
         	{
@@ -110,7 +119,7 @@ class EmployeeController extends BaseController
 			        				'middle_name'	=> Input::get('middle_name'),
 			        				'last_name'		=> Input::get('last_name'),
 			        				'sex'			=> Input::get('sex'),
-			        				'dob'			=> Input::get('dob_year').'-'.Input::get('dob_month').'-'.$day,
+			        				'dob'			=> $dob,
 			        				'department'	=> Input::get('department'),
 			        				'position'		=> Input::get('position'),
 			        				'hire_year'		=> Input::get('hire_year'),
@@ -120,7 +129,15 @@ class EmployeeController extends BaseController
 			        				'client_id' 	=> Input::get('client_id'),
 			        				'location_id'	=> Input::get('location_id')
 		        			   ));
-           		Notification::success('Employee created successfully. You can later access/preview it here');
+
+        		//save activity to Feeds
+        		Feed::create(array(
+        						'user_id' 	=> Sentry::getUser()->id,
+        						'ftype' 	=> 'create',
+        						'fcomment' 	=> 'created new Employee'
+        					 ));
+
+           		Notification::success('Employee created successfully. <a href="'.URL::route('employee.edit').'">You can later access/preview it here</a>');
            		return Redirect::route('employee.create');
         	}
         	else
@@ -140,7 +157,15 @@ class EmployeeController extends BaseController
 			    $emp->client_id 	= Input::get('client_id');
 			    $emp->location_id	= Input::get('location_id'); 
         		$emp->save();
-        		Notification::success('Employee updated successfully. You can later access/preview it here');
+
+        		//save activity to Feeds
+        		Feed::create(array(
+        						'user_id' 	=> Sentry::getUser()->id,
+        						'ftype' 	=> 'edit',
+        						'fcomment' 	=> 'edited the Employee'
+        					 ));
+
+        		Notification::success('Employee updated successfully. <a href="'.URL::route('employee.edit').'">You can later access/preview it here</a>');
         		return Redirect::route('employee.edit');
         	}
         }
@@ -151,6 +176,12 @@ class EmployeeController extends BaseController
 		$emp = Employee::find(Input::get('employee_id'));
 		if($emp->delete())
 		{
+			//save activity to Feeds
+    		Feed::create(array(
+    						'user_id' 	=> Sentry::getUser()->id,
+    						'ftype' 	=> 'delete',
+    						'fcomment' 	=> 'deleted the Employee #'.$emp->id
+    					 ));
 			Notification::success('Employee has been deleted');
 			return Redirect::route('employee.delete');
 		}
