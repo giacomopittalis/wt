@@ -16,7 +16,7 @@
         @include('health-consult._partials.notes')
         <div class="submit-section">
         	{{ Form::hidden('health_consult_id','') }}
-        	{{ Form::submit(ucfirst($action),array('class' => 'btn btn-submit right')) }}
+            {{ Form::submit(ucfirst($action),array('class' => 'btn btn-submit right')) }}
             <button type="button" class="btn btn-cancel right">Cancel</button>
             <div class="clear"></div>
         </div>

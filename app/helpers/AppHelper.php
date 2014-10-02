@@ -309,4 +309,20 @@ class AppHelper
 				 ),
 			   );
 	}
+
+	public static function getDateFormatted($date)
+	{
+		$ndate = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$date);
+		$date2 = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$date)
+							   ->format('Y-m-d');
+		$today = \Carbon\Carbon::now()->format('Y-m-d');
+		if($date2 == $today)
+		{
+			return 'Today at '.$ndate->format('g:i A');
+		}
+		else
+		{
+			return $ndate->format('jS F Y \a\t g:ia');
+		}
+	}
 }
