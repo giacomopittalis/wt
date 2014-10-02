@@ -30,7 +30,8 @@ class CreateWellCreditConsultTable extends Migration {
 			$table->foreign('employee_id')->references('id')->on('employees');
 			$table->text('comment')->nullable();
 
-			$table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+			$table->dateTime('created_at')
+				  ->nullable();
 			$table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
 		});
 	}

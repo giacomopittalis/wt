@@ -33,7 +33,8 @@ class CreateContactsTable extends Migration {
 			$table->integer('employee_id')->unsigned();	
 			$table->foreign('employee_id')->references('id')->on('employees');
 
-			$table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+			$table->dateTime('created_at')
+				  ->nullable();
 			$table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
 		});
 	}

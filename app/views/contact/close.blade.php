@@ -17,16 +17,16 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Client</label><br>
-                                {{ Form::select('client_id',AppHelper::getClients(),'',array('id'=>'client_id_contact')) }}
+                                {{ Form::select('client_id',AppHelper::getClients(),'',array('id'=>'client_id')) }}
                             </div>
                             <div class="form-group">
                                 <label>Location</label><br>
-                                {{ Form::select('location_id',AppHelper::getLocations(),'',array('id'=>'location_id_contact')) }}
+                                {{ Form::select('location_id',AppHelper::getLocations(),'',array('id'=>'location_id')) }}
                             </div>
                             <div class="form-group">
                                 <label>Contact</label><br>
                                 <select name="contact_id" id="contact_id">
-                                    <option value="0" disabled="" selected="">Select Contact</option>
+                                    <option value="0" disabled="" selected="">Select Contact ID</option>
                                 </select>
                             </div>
                         </div>

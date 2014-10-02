@@ -11,7 +11,7 @@
 @section('content')
 	{{ Form::open(array('route' => 'opportunity-consult.store','id' => 'create-employee')) }}
 		@include('partials.notification')
-        @include('partials.forms.client-information')
+        @include('partials.forms.client-information',array('action' => $action))
         <div class="form-section">
             <div class="row">
                 <div class="col-sm-4">
@@ -29,7 +29,7 @@
         @include('partials.forms.notes')
         <div class="submit-section">
         	{{ Form::hidden('health_consult_id',(isset($health_consult->id) ? $health_consult->id : '')) }}
-        	{{ Form::submit('Create',array('class' => 'btn btn-submit right')) }}
+        	{{ Form::submit(ucfirst($action),array('class' => 'btn btn-submit right')) }}
             <button type="button" class="btn btn-cancel right">Cancel</button>
             <div class="clear"></div>
         </div>

@@ -7,13 +7,13 @@
 $(function()
 {
 
-	$('#client_id_contact').change(function()
+	$('#client_id').change(function()
 	{
 		Contact.client_id = $(this).val();
 		Contact.getData();
 	});
 
-	$('#location_id_contact').change(function()
+	$('#location_id').change(function()
 	{
 		Contact.location_id = $(this).val();
 		Contact.getData();
@@ -22,15 +22,15 @@ $(function()
 
 	$('#contact_id').change(function()
 	{
-		$('input[name="contact_id"]').val($(this).val());
+		$('input[name="health_consult_id"]').val($(this).val());
 	});
 
 	var Contact = new function()
 	{
 		this.url		  = '/contact/ajax/get-contacts';
-		this.client_id 	  = $('#client_id_contact').val();
-		this.location_id  = $('#location_id_contact').val();
-		this.contact  = 0;
+		this.client_id 	  = 0;
+		this.location_id  = 0;
+		this.contact      = 0;
 
 		this.getData = function()
 		{
@@ -49,19 +49,22 @@ $(function()
 				})
 				.done(function(oResp)  
 				{
+					var rtn = '<option value="0" disabled="" selected="">Select Contact ID</option>';
 					if(oResp.code == '404')
 					{
 						alert('No Contact Found');
+						$('select[name="contact_id"]').empty()
+				        			    			  .html(rtn);
 					}
 					else
 					{
-						var rtn = '<option value="0" disabled="" selected="">Select Contact</option>';
+						
 						$.each(oResp.buff, function(idx) 
 						{
 							rtn += '<option value="'+oResp.buff[idx].id+'">Contact #'+oResp.buff[idx].id+'</option>';
 				        });
-				        $('#contact_id').empty()
-				        			    .html(rtn);
+				        $('select[name="contact_id"]').empty()
+				        			    			  .html(rtn);
 						//$('#employee_id').append()
 					}
 				    console.log('DATA: ' + oResp);

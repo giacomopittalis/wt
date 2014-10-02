@@ -73,6 +73,13 @@ Route::group(array('before'=>'auth'), function()
 	Route::get('proactive-consult/edit', array('as' => 'proactive-consult.edit', 'uses' => 'ProactiveConsultController@edit'));
 	Route::post('proactive-consult/store', array('as' => 'proactive-consult.store', 'uses' => 'ProactiveConsultController@store'));
 
+	/**
+	 * Proactive Consult AJAX Route
+	 **/
+	Route::get('proactive-consult/ajax/get-proactive-consult', array(
+																'as' => 'proactive-consult.ajax.get-proactive-consult', 
+																'uses' => 'ProactiveConsultController@ajaxGetData'));
+
 	//Well Credit Consult
 	Route::get('well-credit-consult/create', array('as' => 'well-credit-consult.create', 'uses' => 'WellCreditConsultController@create'));
 	Route::post('well-credit-consult/store', array('as' => 'well-credit-consult.store', 'uses' => 'WellCreditConsultController@store'));

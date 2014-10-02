@@ -28,7 +28,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <input type="checkbox" name="medical-care" value="true"><span class="checkbox-label">Under Medical Care</span>
+                    <input type="checkbox" name="under_medial_car" value="1"><span class="checkbox-label">Under Medical Care</span>
                 </div>
             </div>
         </div>

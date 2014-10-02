@@ -37,7 +37,8 @@ class CreateOpportunityConsultTable extends Migration {
 			$table->integer('follow_up')->nullable();
 			$table->text('notes')->nullable();
 
-			$table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+			$table->dateTime('created_at')
+				  ->nullable();
 			$table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
 		});
 	}
