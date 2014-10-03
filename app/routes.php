@@ -61,6 +61,13 @@ Route::group(array('before'=>'auth'), function()
 	Route::get('injury-consult/edit', array('as' => 'injury-consult.edit', 'uses' => 'InjuryConsultController@edit'));
 	Route::post('injury-consult/store', array('as' => 'injury-consult.store', 'uses' => 'InjuryConsultController@store'));
 
+	/**
+	 * Injury AJAX Route
+	 **/
+	Route::get('injury-consult/ajax/get-injury-consult', array(
+																'as' => 'injury-consult.ajax.get-health-injury', 
+																'uses' => 'InjuryConsultController@ajaxGetData'));
+
 	/** 
 	 * Opportunity Consult
 	 */

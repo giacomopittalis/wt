@@ -42,7 +42,7 @@ $(function()
 				{
 					if(oResp.code == '404')
 					{
-						alert('No Opportunity Consult Found');
+						alert('No Injury Consult Found');
 					}
 					else
 					{

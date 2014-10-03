@@ -55,6 +55,17 @@ $(function()
 					if(oResp.code == '404')
 					{
 						alert('No Employee Found');
+						$('#create-employee').find('input:text, input:password, input:file, textarea').val('');
+					    $('#create-employee').find('input:radio, input:checkbox')
+					         				 .removeAttr('checked').removeAttr('selected');
+
+					    //employee_id
+					    var rtn = '<option value="0" disabled="" selected="">Select Employee</option>';
+					    $('#employee_id').empty()
+				        				 .html(rtn);
+				        //sex
+				        $('select[name="sex"], select[name="hire_year"], select[name="hire_type"]').val('0');
+
 					}
 					else
 					{
@@ -105,14 +116,18 @@ $(function()
 								//Personal Demographics
 								$('#sex').val(oResp.buff[idx].sex);
 								var dob = oResp.buff[idx].dob;
-								var ndob = dob.split('-');
-								$('#dob_year').val(ndob[0]);
-								$('#dob_month').val(ndob[1]);
-								$('#dob_day').val(ndob[2]);
+								if(dob)
+								{
+									var ndob = dob.split('-');
+									$('#dob_year').val(ndob[0]);
+									$('#dob_month').val(ndob[1]);
+									$('#dob_day').val(ndob[2]);
+								}
+								
 								//Official Demographics
-								$('#department').val(oResp.buff[idx].department);
-								$('#position').val(oResp.buff[idx].position);
-								$('#employee_number').val(oResp.buff[idx].employee_number);
+								$('input[name="department"]').val(oResp.buff[idx].department);
+								$('input[name="position"]').val(oResp.buff[idx].position);
+								$('input[name="employee_number"]').val(oResp.buff[idx].employee_number);
 								$('#hire_year').val(oResp.buff[idx].hire_year);
 								$('#hire_type').val(oResp.buff[idx].hire_type);
 								$('#health_plan').val(oResp.buff[idx].health_plan);

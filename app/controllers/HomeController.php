@@ -14,7 +14,7 @@ class HomeController extends BaseController
 		$feeds = Feed::select('feeds.*','users.first_name','users.last_name')
 					 ->join('users','feeds.user_id','=','users.id')
 					 ->orderBy('feeds.created_at','DESC')
-					 ->limit(10)
+					 ->limit(8)
 					 ->get();
 		return View::make('home.dashboard',array('feeds' => $feeds));
 	}

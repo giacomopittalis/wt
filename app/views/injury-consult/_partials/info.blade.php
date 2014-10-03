@@ -9,38 +9,38 @@
         </div>
         <div class="col-sm-8">
             <div id="info">
-                <input type="checkbox" name="" value=""><span class="checkbox-label">Work vs. Non Work - Check for work</span><br>
-                <input type="checkbox" name="" value=""><span class="checkbox-label">Existing vs. Pre Existing - Check for Existing</span><br>
+                <input type="checkbox" name="info[general][work][]" value="1"><span class="checkbox-label">Work vs. Non Work - Check for work</span><br>
+                <input type="checkbox" name="info[general][work][]" value="2"><span class="checkbox-label">Existing vs. Pre Existing - Check for Existing</span><br>
                 <div class="line-separator"></div>
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label>MOI</label><br>
-                            <textarea></textarea>
+                            <textarea name="info[general][moi]"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="line-separator"></div>
                 <div class="row">
                     <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Acute</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Overuse</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Over Stretching</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="1"><span class="checkbox-label">Acute</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="2"><span class="checkbox-label">Overuse</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="3"><span class="checkbox-label">Over Stretching</span><br>
                     </div>
                     <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Chronic</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Twisting</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Slip/Fall</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="4"><span class="checkbox-label">Chronic</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="5"><span class="checkbox-label">Twisting</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="6"><span class="checkbox-label">Slip/Fall</span><br>
                     </div>
                     <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Blunt Trauma</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Sheer Force</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Equipment</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="7"><span class="checkbox-label">Blunt Trauma</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="8"><span class="checkbox-label">Sheer Force</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="9"><span class="checkbox-label">Equipment</span><br>
                     </div>
                     <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Caught Between</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Over Exertion</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Other</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="10"><span class="checkbox-label">Caught Between</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="11"><span class="checkbox-label">Over Exertion</span><br>
+                        <input type="checkbox" name="info[general][criteria][]" value="12"><span class="checkbox-label">Other</span><br>
                     </div>
                 </div>
                 <div class="line-separator"></div>
@@ -48,80 +48,34 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Pain Level</label><br>
-                            <select>
-                                <option value="" disabled="" selected="">Select Pain Level</option>
-                                <option value="">Lorem Ipsum</option>
-                                <option value="">Dolor Sit Amet</option>
+                            <select name="info[pain_level]">
+                                <option value="0" disabled="" selected="">Select Pain Level</option>
+                                <option value="1">Lorem Ipsum</option>
+                                <option value="2">Dolor Sit Amet</option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Acute</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Overuse</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Over Stretching</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="1"><span class="checkbox-label">Acute</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="2"><span class="checkbox-label">Overuse</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="3"><span class="checkbox-label">Over Stretching</span><br>
                     </div>
                     <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Chronic</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Twisting</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Slip/Fall</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="4"><span class="checkbox-label">Chronic</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="5"><span class="checkbox-label">Twisting</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="6"><span class="checkbox-label">Slip/Fall</span><br>
                     </div>
                     <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Blunt Trauma</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Sheer Force</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Equipment</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="7"><span class="checkbox-label">Blunt Trauma</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="8"><span class="checkbox-label">Sheer Force</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="9"><span class="checkbox-label">Equipment</span><br>
                     </div>
                     <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Caught Between</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Over Exertion</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Other</span><br>
-                    </div>
-                </div>
-                <div class="line-separator"></div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Acute</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Overuse</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Over Stretching</span><br>
-                    </div>
-                    <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Chronic</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Twisting</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Slip/Fall</span><br>
-                    </div>
-                    <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Blunt Trauma</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Sheer Force</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Equipment</span><br>
-                    </div>
-                    <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Caught Between</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Over Exertion</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Other</span><br>
-                    </div>
-                </div>
-                <div class="line-separator"></div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Acute</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Overuse</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Over Stretching</span><br>
-                    </div>
-                    <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Chronic</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Twisting</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Slip/Fall</span><br>
-                    </div>
-                    <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Blunt Trauma</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Sheer Force</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Equipment</span><br>
-                    </div>
-                    <div class="col-sm-3">
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Caught Between</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Over Exertion</span><br>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">Other</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="10"><span class="checkbox-label">Caught Between</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="11"><span class="checkbox-label">Over Exertion</span><br>
+                        <input type="checkbox" name="info[pain_level][criteria][]" value="12"><span class="checkbox-label">Other</span><br>
                     </div>
                 </div>
                 <div class="line-separator"></div>

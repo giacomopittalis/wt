@@ -22,7 +22,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label>Contact ID</label><br>
-                        {{ Form::select('employee_id',AppHelper::getEmployees('Select Contact ID')) }}
+                        {{ Form::select('employee_id',array('Select Contact ID'),'array') }}
                     </div>
                 </div>
             </div>

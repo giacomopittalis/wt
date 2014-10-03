@@ -17,14 +17,14 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Client <span class="text-danger">*</span></label><br>
-                                {{ Form::select('client_id',AppHelper::getClients()) }}
+                                {{ Form::select('client_id',AppHelper::getClients(),'',array('id'=>'client_id_employee')) }}
                                 @include('partials.error-message',array('field' => 'client_id'))
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Location <span class="text-danger">*</span></label><br>
-                                {{ Form::select('location_id',AppHelper::getLocations()) }}
+                                {{ Form::select('location_id',AppHelper::getLocations(),'',array('id'=>'location_id_employee')) }}
                                 @include('partials.error-message',array('field' => 'location_id'))
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Employee <span class="text-danger">*</span></label><br>
-                                {{ Form::select('employee_id',AppHelper::getEmployees()) }}  
+                                {{ Form::select('employee_id',array('Select Employee'),'',array('id'=>'employee_id')) }}  
                                 @include('partials.error-message',array('field' => 'employee_id'))
                             </div>
                         </div>

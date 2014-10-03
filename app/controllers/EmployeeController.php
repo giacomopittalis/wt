@@ -122,6 +122,7 @@ class EmployeeController extends BaseController
 			        				'dob'			=> $dob,
 			        				'department'	=> Input::get('department'),
 			        				'position'		=> Input::get('position'),
+			        				'employee_number' => Input::get('employee_number'),
 			        				'hire_year'		=> Input::get('hire_year'),
 			        				'hire_type'		=> Input::get('hire_type'),
 			        				'health_plan' 	=> Input::get('health_plan'),
@@ -147,9 +148,10 @@ class EmployeeController extends BaseController
         		$emp->middle_name 	= Input::get('middle_name');
         		$emp->last_name		= Input::get('last_name');
         		$emp->sex 			= Input::get('sex');
-        		$emp->dob			= Input::get('dob_year').'-'.Input::get('dob_month').'-'.$day;
+        		$emp->dob			= $dob;
 			    $emp->department	= Input::get('department');
 			    $emp->position		= Input::get('position');
+			    $emp->employee_number = Input::get('employee_number');
 			    $emp->hire_year		= Input::get('hire_year');
 			    $emp->hire_type		= Input::get('hire_type');
 			    $emp->health_plan 	= Input::get('health_plan');
