@@ -65,7 +65,7 @@ return array(
          * Default individual messages for all containers.
          */
         '__'                    => array(
-            'error' => '<div class="alert alert-danger" role="alert" style="padding-left: 10px; margin-left: 0; margin-top: 10px">:message</div>',
+            'error' => '<div class="alert alert-danger" role="alert" style="padding-left: 10px">:message</div>',
             'success' => '<div class="alert alert-success" role="alert" style="padding-left: 10px; margin: 10px 25px 0 25px">:message</div>',
         ),
 

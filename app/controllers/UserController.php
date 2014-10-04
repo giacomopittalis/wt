@@ -26,6 +26,12 @@ class UserController extends BaseController
         return Redirect::route('login');
 	}
 
+    public function change_password()
+    {
+        View::share('page_title','Change Password');
+        return View::make('user.change_password');
+    }
+
 	public function do_login()
 	{
 		$rules = array(
@@ -95,4 +101,52 @@ class UserController extends BaseController
             }
         }
 	}
+
+    public function do_change_password()
+    {
+        //validation first
+        $rules = array(
+                    'old_password'         => array('required'),
+                    'new_password'         => array('required'),
+                    //'confirm_password'     => array()
+                 );
+
+        $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails()) 
+        {
+            //validation fails
+            return Redirect::route('change-password')
+                           ->withInput()
+                           ->withErrors($validator);
+        } 
+        else 
+        {
+             //check user first
+            $user = Sentry::getUser();
+            $old = Input::get('old_password');
+            $new = Input::get('new_password');
+
+            try
+            {
+                // Login credentials
+                $credentials = array(
+                    'email'    => $user->email,
+                    'password' => $old,
+                );
+
+                // Authenticate the user
+                $user = Sentry::authenticate($credentials, false);
+                $user->password = $new;
+                $user->save();
+                Notification::success('Password changed successfully.');
+                return Redirect::route('change-password');
+            }
+            catch (Cartalyst\Sentry\Users\WrongPasswordException $e)
+            {
+                Notification::error('Wrong password, try again.');
+                return Redirect::route('change-password');
+            }
+        }
+    }
 }

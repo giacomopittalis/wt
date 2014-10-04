@@ -43,7 +43,11 @@
                         <i class="fa fa-user"></i> <span class="user-name">{{ Sentry::getUser()->first_name }} {{ Sentry::getUser()->last_name }}</span> <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="change_password.html"><i class="fa fa-fw fa-gear"></i> Change Password</a></li>
+                        <li>
+                            <a href="{{ URL::route('change-password') }}">
+                                <i class="fa fa-fw fa-gear"></i> Change Password
+                            </a>
+                        </li>
                         <li>
                             <a href="{{ URL::route('logout') }}">
                                 <i class="fa fa-fw fa-power-off"></i> Log Out

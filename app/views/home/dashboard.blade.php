@@ -14,8 +14,12 @@
         </li>
         @endforeach
     </ul>
-    @endif
     <div class="load-more">
         <a href="javascript:void(0)" id="load-more">Load more activity</a>
     </div>
+    @else
+         <div class="load-more">
+            No Activity Found
+        </div>
+    @endif
 @stop

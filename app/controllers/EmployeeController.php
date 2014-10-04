@@ -75,12 +75,12 @@ class EmployeeController extends BaseController
         	{
         		$destinationPath = public_path().'/uploads';
 	        	$filename = md5(\Carbon\Carbon::now());
-	        	$extension = Input::file('service_image')->getClientOriginalExtension();
+	        	$extension = Input::file('identification')->getClientOriginalExtension();
 
 	        	//do the upload file
-	        	$file = Input::file('service_image')
+	        	$file = Input::file('identification')
 	        		 		  ->move($destinationPath, $filename.'.'.$extension);
-        		$service_image = asset('uploads/'.$filename.'.'.$extension);
+        		$employee_image = asset('uploads/'.$filename.'.'.$extension);
         	}
         	else
         	{

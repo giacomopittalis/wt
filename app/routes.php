@@ -103,6 +103,8 @@ Route::group(array('before'=>'auth'), function()
 
 	//Logout
 	Route::get('logout', array('as' => 'logout', 'uses' => 'UserController@logout'));
+	Route::get('change-password',array('as' => 'change-password', 'uses' => 'UserController@change_password'));
+	Route::post('change-password',array('as' => 'change-password', 'uses' => 'UserController@do_change_password'));
 });
 
 Route::group(array('before'=>'guest'), function()
