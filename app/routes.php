@@ -100,6 +100,7 @@ Route::group(array('before'=>'auth'), function()
 	Route::post('well-credit-consult/store', array('as' => 'well-credit-consult.store', 'uses' => 'WellCreditConsultController@store'));
 
 	//Reports
+	Route::get('reports', array('as' => 'reports', 'uses' => 'ReportsController@index'));
 	Route::get('reports/export', array('as' => 'reports.export', 'uses' => 'ReportsController@export'));
 
 	//Logout

@@ -303,7 +303,7 @@ class AppHelper
 				 ),
 				 array
 				 (
-				 	'href' 	=> URL::route('reports.export'),
+				 	'href' 	=> URL::route('reports'),
 				 	'icon' 	=> 'i16',
 				 	'text'	=> 'Export'
 				 ),
