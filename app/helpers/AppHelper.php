@@ -325,4 +325,13 @@ class AppHelper
 			return $ndate->format('jS F Y \a\t g:ia');
 		}
 	}
+
+	public static function getUserPicture($user_id)
+	{
+		$identification = UserProfileComponent::where('user_id',$user_id)
+											  ->where('name','identification')
+											  ->get()
+											  ->first();
+		return ($identification) ? $identification->value : asset('assets/img/profile.png');
+	}
 }

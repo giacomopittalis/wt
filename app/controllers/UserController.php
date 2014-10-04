@@ -9,6 +9,8 @@
 
 class UserController extends BaseController
 {
+    protected $user;
+
 	public function __construct()
 	{
 		//\Debugbar::disable();
@@ -30,6 +32,21 @@ class UserController extends BaseController
     {
         View::share('page_title','Change Password');
         return View::make('user.change_password');
+    }
+
+    public function profile()
+    {
+        $this->user = Sentry::getUser();
+        //get user image
+        $identification = UserProfileComponent::where('user_id',$this->user->id)
+                                              ->where('name','identification')
+                                              ->get()
+                                              ->first();
+        View::share('page_title','My Profile');
+        return View::make('user.profile',array(
+                                            'user' => $this->user,
+                                            'identification' => $identification
+                                         ));
     }
 
 	public function do_login()
@@ -122,7 +139,7 @@ class UserController extends BaseController
         } 
         else 
         {
-             //check user first
+            //check user first
             $user = Sentry::getUser();
             $old = Input::get('old_password');
             $new = Input::get('new_password');
@@ -146,6 +163,84 @@ class UserController extends BaseController
             {
                 Notification::error('Wrong password, try again.');
                 return Redirect::route('change-password');
+            }
+        }
+    }
+
+    public function do_profile()
+    {
+        //validation first
+        $rules = array(
+                    'first_name'        => array('required'),
+                    'last_name'         => array('required'),
+                 );
+
+        $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails()) 
+        {
+            //validation fails
+            return Redirect::route('profile')
+                           ->withInput()
+                           ->withErrors($validator);
+        } 
+        else 
+        {
+            $user = Sentry::getUser();
+            $user = Sentry::findUserById($user->id);
+
+            //upload file
+            $identification = "";
+            if(Input::hasFile('identification'))
+            {
+                $destinationPath = public_path().'/uploads';
+                $filename = md5(\Carbon\Carbon::now());
+                $extension = Input::file('identification')->getClientOriginalExtension();
+
+                //do the upload file
+                $file = Input::file('identification')
+                              ->move($destinationPath, $filename.'.'.$extension);
+                $identification = asset('uploads/'.$filename.'.'.$extension);
+            }
+            // check in users_profile_components
+            $user_image = UserProfileComponent::where('user_id',$user->id)
+                                              ->where('name','identification')
+                                              ->get()
+                                              ->first();
+            if($user_image)
+            {
+                //if there's user_image 
+                if($identification != "")
+                {
+                    $user_image = UserProfileComponent::find($user_image->id);
+                    $user_image->value = $identification;
+                    $user_image->save();
+                }
+            }
+            else
+            {
+                //create new value 
+                UserProfileComponent::create(array(
+                                                'user_id'   => $user->id,
+                                                'name'      => 'identification',
+                                                'value'     => $identification
+                                            ));
+            }
+
+            //save the profile
+            try
+            {
+                $user->first_name = Input::get('first_name');
+                $user->last_name = Input::get('last_name');
+                $user->save();
+
+                Notification::success('Profile updated successfully.');
+                return Redirect::route('profile');
+            }
+            catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+            {
+                Notification::error('User not found.');
+                return Redirect::route('profile');
             }
         }
     }

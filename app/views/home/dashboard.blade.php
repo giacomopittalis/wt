@@ -15,6 +15,7 @@
         @endforeach
     </ul>
     <div class="load-more">
+        <input name="page" id="page" type="hidden" value="1">
         <a href="javascript:void(0)" id="load-more">Load more activity</a>
     </div>
     @else

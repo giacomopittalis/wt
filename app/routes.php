@@ -15,6 +15,7 @@ Route::group(array('before'=>'auth'), function()
 {
 	Route::get('/', 'HomeController@dashboard');
 	Route::get('dashboard',array('as' => 'dashboard', 'uses' => 'HomeController@dashboard'));
+	Route::get('dashboard/ajax/load-more',array('as' => 'dashboard.load-more', 'uses' => 'HomeController@ajaxGetData'));
 
 	/**
 	 * Employee's Route
@@ -103,8 +104,10 @@ Route::group(array('before'=>'auth'), function()
 
 	//Logout
 	Route::get('logout', array('as' => 'logout', 'uses' => 'UserController@logout'));
-	Route::get('change-password',array('as' => 'change-password', 'uses' => 'UserController@change_password'));
-	Route::post('change-password',array('as' => 'change-password', 'uses' => 'UserController@do_change_password'));
+	Route::get('me/change-password',array('as' => 'change-password', 'uses' => 'UserController@change_password'));
+	Route::post('me/change-password',array('as' => 'change-password', 'uses' => 'UserController@do_change_password'));
+	Route::get('me/profile', array('as' => 'profile', 'uses' => 'UserController@profile'));
+	Route::post('me/profile', array('as' => 'profile', 'uses' => 'UserController@do_profile'));
 });
 
 Route::group(array('before'=>'guest'), function()

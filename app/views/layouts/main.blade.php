@@ -38,11 +38,19 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
-                    <img class="user-picture" src="{{ asset('assets/img/profile.png') }}">
+                    <img class="user-picture" src="{{ AppHelper::getUserPicture(Sentry::getUser()->id) }}" width="32" height="32">
+                    <!-- <img class="user-picture" src="{{ asset('assets/img/profile.png') }}"> -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-user"></i> <span class="user-name">{{ Sentry::getUser()->first_name }} {{ Sentry::getUser()->last_name }}</span> <b class="caret"></b>
+                        <i class="fa fa-user"></i> 
+                        <span class="user-name">{{ Sentry::getUser()->first_name }} {{ Sentry::getUser()->last_name }}</span> 
+                        <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{ URL::route('profile') }}">
+                                <i class="fa fa-fw fa-user"></i> My Profile
+                            </a>
+                        </li>
                         <li>
                             <a href="{{ URL::route('change-password') }}">
                                 <i class="fa fa-fw fa-gear"></i> Change Password
