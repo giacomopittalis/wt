@@ -25,7 +25,7 @@ class ProactiveConsultController extends BaseController
 	//need add validation
 	public function store()
 	{
-		$id = Input::get('id');
+		$id = Input::get('proactive_consult_id');
 
 		$rules = array(
 		            'client_id'			=> array('not_in:0'),

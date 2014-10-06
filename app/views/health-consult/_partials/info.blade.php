@@ -12,14 +12,14 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label>Height</label><br>
+                            <label>Height (cm)</label><br>
                             {{ Form::text('info[height]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label>Weight</label><br>
-                            {{ Form::text('info[width]','',array('class' => 'form-control')) }}
+                            <label>Weight (kg)</label><br>
+                            {{ Form::text('info[weight]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Body Fat (Segmental)</label><br>
-                            {{ Form::text('info[body-fat]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[body_fat]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
@@ -55,13 +55,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Visceral Fat</label><br>
-                            {{ Form::text('info[visceral-fat]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[visceral_fat]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Bone Mass</label><br>
-                            {{ Form::text('info[bone-mass]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[bone_mass]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
@@ -69,13 +69,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Muscle Mass (Segmental)</label><br>
-                            {{ Form::text('info[muscle-mass]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[muscle_mass]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Waist Circumference</label><br>
-                            {{ Form::text('info[waist-circumference]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[waist_circumference]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
@@ -83,13 +83,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Hip Circumference</label><br>
-                            {{ Form::text('info[hip-circumference]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[hip_circumference]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Thigh Circumference</label><br>
-                            {{ Form::text('info[thigh-circumference]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[thigh_circumference]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
@@ -97,13 +97,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Arm Circumference</label><br>
-                            {{ Form::text('info[arm-circumference]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[arm_circumference]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Chest Circumference</label><br>
-                            {{ Form::text('info[chest-circumference]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[chest_circumference]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Heart Rate</label><br>
-                            {{ Form::text('info[heart-rate]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[heart_rate]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -139,7 +139,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Total CHO</label><br>
-                            {{ Form::text('info[total-cho]','',array('class' => 'form-control')) }}
+                            {{ Form::text('info[total_cho]','',array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-sm-6">

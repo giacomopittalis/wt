@@ -47,7 +47,7 @@ class WellCreditConsultController extends BaseController
     		Feed::create(array(
     						'user_id' 	=> Sentry::getUser()->id,
     						'ftype' 	=> 'create',
-    						'fcomment' 	=> 'created new Well Credit Consult'
+    						'fcomment' 	=> 'create new Well Credit Consult'
     					 ));
 
 			Notification::success('Well Credit Consult created successfully');

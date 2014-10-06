@@ -40,7 +40,7 @@
         </div>
         @include('partials.forms.notes')
         <div class="submit-section">
-        	{{ Form::hidden('id','') }}
+        	{{ Form::hidden('proactive_consult_id','') }}
         	@if($action == 'edit')
                 {{ Form::submit('Save',array('class' => 'btn btn-submit right')) }}
             @else

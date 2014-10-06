@@ -11,7 +11,7 @@
 @section('content')
 	{{ Form::open(array('route' => 'opportunity-consult.store','id' => 'create-employee')) }}
 		@include('partials.notification')
-        @include('partials.forms.client-information',array('action' => $action,'id'=>'contact_id_opportunity'))
+        @include('partials.forms.client-information',array('action' => $action,'contact_id'=>'contact_id_opportunity'))
         <div class="form-section">
             <div class="row">
                 <div class="col-sm-4">

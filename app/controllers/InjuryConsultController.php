@@ -27,7 +27,7 @@ class InjuryConsultController extends BaseController
 	{
 		$id = Input::get('id');
 
-		var_dump(json_encode(Input::get('info'))); exit;
+		//var_dump(json_encode(Input::get('info'))); exit;
 
 		$info = array(
 					'general'	=> array(	

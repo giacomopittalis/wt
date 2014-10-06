@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"Health",
+				"HealthConsult"
+			],
+			[
 				"hire",
 				"hire_type"
 			],
@@ -22,10 +26,6 @@
 			[
 				"opp",
 				"opportunity-consult"
-			],
-			[
-				"Health",
-				"HealthConsultController"
 			],
 			[
 				"Proac",
@@ -520,18 +520,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/employee/form.blade.php",
+			"file": "app/controllers/WellCreditConsultController.php",
 			"settings":
 			{
-				"buffer_size": 6119,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/EmployeeController.php",
-			"settings":
-			{
-				"buffer_size": 7113,
+				"buffer_size": 1592,
 				"line_ending": "Unix"
 			}
 		}
@@ -590,19 +582,11 @@
 		"/Users/andriansandi/Sites/welltrail/app/assets/css",
 		"/Users/andriansandi/Sites/welltrail/app/assets/js",
 		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules",
-		"/Users/andriansandi/Sites/welltrail/app/config",
-		"/Users/andriansandi/Sites/welltrail/app/config/packages",
-		"/Users/andriansandi/Sites/welltrail/app/config/packages/edvinaskrucas",
-		"/Users/andriansandi/Sites/welltrail/app/config/packages/edvinaskrucas/notification",
 		"/Users/andriansandi/Sites/welltrail/app/controllers",
-		"/Users/andriansandi/Sites/welltrail/app/database",
-		"/Users/andriansandi/Sites/welltrail/app/database/migrations",
-		"/Users/andriansandi/Sites/welltrail/app/database/seeds",
 		"/Users/andriansandi/Sites/welltrail/app/helpers",
 		"/Users/andriansandi/Sites/welltrail/app/models",
 		"/Users/andriansandi/Sites/welltrail/app/start",
 		"/Users/andriansandi/Sites/welltrail/app/views",
-		"/Users/andriansandi/Sites/welltrail/app/views/contact",
 		"/Users/andriansandi/Sites/welltrail/app/views/employee",
 		"/Users/andriansandi/Sites/welltrail/app/views/employee/_partials",
 		"/Users/andriansandi/Sites/welltrail/app/views/health-consult",
@@ -610,13 +594,11 @@
 		"/Users/andriansandi/Sites/welltrail/app/views/home",
 		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult",
 		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/_partials",
-		"/Users/andriansandi/Sites/welltrail/app/views/layouts",
 		"/Users/andriansandi/Sites/welltrail/app/views/opportunity-consult",
 		"/Users/andriansandi/Sites/welltrail/app/views/partials",
 		"/Users/andriansandi/Sites/welltrail/app/views/partials/forms",
 		"/Users/andriansandi/Sites/welltrail/app/views/proactive-consult",
-		"/Users/andriansandi/Sites/welltrail/app/views/user",
-		"/Users/andriansandi/Sites/welltrail/app/views/well-credit-consult",
+		"/Users/andriansandi/Sites/welltrail/app/views/report",
 		"/Users/andriansandi/Sites/welltrail/bower_components",
 		"/Users/andriansandi/Sites/welltrail/public",
 		"/Users/andriansandi/Sites/welltrail/public/assets",
@@ -625,57 +607,66 @@
 	],
 	"file_history":
 	[
-		"/Users/andriansandi/Sites/welltrail/app/config/packages/edvinaskrucas/notification/config.php",
+		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/injury-consult.js",
+		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/health-consult.js",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/HealthConsultController.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/_partials/notes.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/InjuryConsultController.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/_partials/info.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/helpers/AppHelper.php",
 		"/Users/andriansandi/Sites/welltrail/app/routes.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/employee/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/opportunity-consult/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/opportunity-consult.js",
+		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/proactive-consult.js",
+		"/Users/andriansandi/Sites/welltrail/app/views/proactive-consult/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/partials/forms/client-information.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/ProactiveConsultController.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/form.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/_partials/info.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/_partials/notes.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/report/graph.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/ReportsController.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/ContactController.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/layouts/main.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/report/index.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/HomeController.php",
+		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/dashboard.js",
+		"/Users/andriansandi/Sites/welltrail/app/views/home/dashboard.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/contact.js",
 		"/Users/andriansandi/Sites/welltrail/app/controllers/UserController.php",
+		"/Users/andriansandi/Sites/welltrail/app/views/user/profile.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/controllers/EmployeeController.php",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_10_04_142845_create_users_profile_component_table.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/OpportunityConsult.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/UserProfileComponent.php",
+		"/Users/andriansandi/Sites/welltrail/app/models/User.php",
+		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_10_02_162927_create_feeds_table.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/user/change_password.blade.php",
+		"/Users/andriansandi/Sites/welltrail/app/assets/css/style.css",
+		"/Users/andriansandi/Sites/welltrail/app/config/packages/edvinaskrucas/notification/config.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/partials/notification.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/employee/_partials/create-employee-hierarchy.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/employee/_partials/edit-employee-hierarchy.blade.php",
-		"/Users/andriansandi/Sites/welltrail/app/views/proactive-consult/form.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/contact/form.blade.php",
-		"/Users/andriansandi/Sites/welltrail/app/views/home/dashboard.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/employee.js",
-		"/Users/andriansandi/Sites/welltrail/app/controllers/EmployeeController.php",
-		"/Users/andriansandi/Sites/welltrail/app/views/employee/form.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_10_02_234247_add_field_employee_number_on_employees.php",
-		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/_partials/info.blade.php",
-		"/Users/andriansandi/Sites/welltrail/app/controllers/InjuryConsultController.php",
-		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/injury-consult.js",
-		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/form.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/_partials/client-information.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/controllers/OpportunityConsultController.php",
-		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/form.blade.php",
-		"/Users/andriansandi/Sites/welltrail/app/controllers/HealthConsultController.php",
 		"/Users/andriansandi/Sites/welltrail/app/models/InjuryConsult.php",
-		"/Users/andriansandi/Sites/welltrail/app/controllers/HomeController.php",
 		"/Users/andriansandi/Sites/welltrail/app/models/HealthConsult.php",
 		"/Users/andriansandi/Sites/welltrail/app/models/ProactiveConsult.php",
-		"/Users/andriansandi/Sites/welltrail/app/models/OpportunityConsult.php",
-		"/Users/andriansandi/Sites/welltrail/app/views/opportunity-consult/form.blade.php",
-		"/Users/andriansandi/Sites/welltrail/app/views/partials/forms/client-information.blade.php",
-		"/Users/andriansandi/Sites/welltrail/app/controllers/ContactController.php",
-		"/Users/andriansandi/Sites/welltrail/app/controllers/ProactiveConsultController.php",
 		"/Users/andriansandi/Sites/welltrail/app/controllers/WellCreditConsultController.php",
 		"/Users/andriansandi/Sites/welltrail/app/models/Feeds.php",
-		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/contact.js",
 		"/Users/andriansandi/Sites/welltrail/app/views/contact/close.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/models/Location.php",
-		"/Users/andriansandi/Sites/welltrail/app/helpers/AppHelper.php",
-		"/Users/andriansandi/Sites/welltrail/app/assets/css/style.css",
 		"/Users/andriansandi/Sites/welltrail/app/models/Client.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/employee/delete.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_30_111125_create_well_credit_consult_table.php",
-		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_10_02_162927_create_feeds_table.php",
-		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/opportunity-consult.js",
 		"/Users/andriansandi/Sites/welltrail/app/views/well-credit-consult/form.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/_partials/client-information.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/partials/error-message.blade.php",
-		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/health-consult.js",
-		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/_partials/info.blade.php",
-		"/Users/andriansandi/Sites/welltrail/app/views/health-consult/_partials/notes.blade.php",
-		"/Users/andriansandi/Sites/welltrail/app/assets/js/modules/proactive-consult.js",
 		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_29_174757_create_clients_table.php",
 		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_30_100350_create_injury_table.php",
 		"/Users/andriansandi/Sites/welltrail/app/database/migrations/2014_09_30_104806_create_opportunity_consult_table.php",
@@ -691,9 +682,7 @@
 		"/Users/andriansandi/Sites/welltrail/app/views/user/login.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/views/layouts/login.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/controllers/BaseController.php",
-		"/Users/andriansandi/Sites/welltrail/app/controllers/ReportsController.php",
 		"/Users/andriansandi/Sites/welltrail/app/models/WellCreditConsult.php",
-		"/Users/andriansandi/Sites/welltrail/app/views/injury-consult/_partials/notes.blade.php",
 		"/Users/andriansandi/Sites/welltrail/app/models/Contact.php",
 		"/Users/andriansandi/Sites/welltrail/app/assets/js/chart.js",
 		"/Users/andriansandi/Sites/welltrail/app/controllers/untitled.html",
@@ -745,14 +734,7 @@
 		"/Users/andriansandi/Sites/syncro/app/views/message/index.blade.php",
 		"/Users/andriansandi/Sites/syncro/app/controllers/SitesController.php",
 		"/Users/andriansandi/Sites/syncro/app/controllers/SettingController.php",
-		"/Users/andriansandi/Sites/syncro/app/views/billings/partials/_invoice-table.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/sites/groups/edit.blade.php",
-		"/private/var/folders/m_/qvm8n7j50hn_ct4c0dl62zm40000gn/T/fz3temp-1/php.ini",
-		"/Users/andriansandi/Sites/syncro/app/views/statistics/email-tracking.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/sites/dashboard.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/statistics/call-tracking.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/views/sites/index.blade.php",
-		"/Users/andriansandi/Sites/syncro/app/libraries/Timezone.php"
+		"/Users/andriansandi/Sites/syncro/app/views/billings/partials/_invoice-table.blade.php"
 	],
 	"find":
 	{
@@ -770,6 +752,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fontAwesome",
 			"u",
 			"ProactiveConsult",
 			"OpportunityConsult",
@@ -896,8 +879,7 @@
 			"login",
 			"activate",
 			"login",
-			"ComposerAutoloaderInit86c52c7159039ad5b5066468c575ec3d",
-			"{\n"
+			"ComposerAutoloaderInit86c52c7159039ad5b5066468c575ec3d"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -939,64 +921,33 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/employee/form.blade.php",
+					"file": "app/controllers/WellCreditConsultController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6119,
+						"buffer_size": 1592,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1416,
+								1416
 							]
 						],
 						"settings":
 						{
-							"function_name_status_row": 0,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1179.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/EmployeeController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7113,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2236,
-								2236
-							]
-						],
-						"settings":
-						{
-							"function_name_status_row": 82,
+							"function_name_status_row": 49,
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2041.0,
+						"translation.y": 159.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

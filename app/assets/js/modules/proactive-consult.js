@@ -13,7 +13,7 @@ $(function()
 		ProactiveConsult.location_id = $('#location_id').val(); 
 		ProactiveConsult.contact_id = $(this).val();
 		ProactiveConsult.getData();
-		$('input[name="id"]').val($(this).val());
+		//$('input[name="id"]').val($(this).val());
 	});
 
 	var ProactiveConsult = new function()
@@ -42,13 +42,15 @@ $(function()
 				{
 					if(oResp.code == '404')
 					{
-						alert('No Opportunity Consult Found');
+						alert('No Proactive Consult Found');
 					}
 					else
 					{
 						
 						$.each(oResp.buff, function(idx) 
 						{
+							$('input[name="proactive_consult_id"]').val(oResp.buff[idx].id);
+
 							if(oResp.buff[idx].under_medical_care == 1)
 							{
 								$("#under_medical_care").prop('checked',true);

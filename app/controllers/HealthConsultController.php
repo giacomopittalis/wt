@@ -25,7 +25,7 @@ class HealthConsultController extends BaseController
 	//need add validation
 	public function store()
 	{
-		$id = Input::get('id');
+		$id = Input::get('health_consult_id');
 
 		$rules = array(
 		            'client_id'			=> array('not_in:0'),
@@ -78,7 +78,21 @@ class HealthConsultController extends BaseController
 			}
 			else
 			{
-
+				$hc = HealthConsult::find($id);
+				$hc->under_medical_care	= Input::get('under_medical_care');
+				$hc->info = json_encode(Input::get('info'));
+				$hc->topics = (Input::get('topic') != "") ? implode(',',Input::get('topic')) : '';
+				$hc->soap = (Input::get('soap') != "") ? implode(',',Input::get('soap')) : '';
+				$hc->follow_up = Input::get('follow_up');
+				$hc->notes = Input::get('notes');
+				//save activity to Feeds
+    			Feed::create(array(
+	    						'user_id' 	=> Sentry::getUser()->id,
+	    						'ftype' 	=> 'edit',
+	    						'fcomment' 	=> 'edit the Health Consult #'.$id
+	    					 ));
+				Notification::success('Health Consult updated successfully. <a href="'.URL::route('health-consult.edit').'">You can later access/preview it here</a>');
+				return Redirect::route('health-consult.edit');
 			}
 		}
 	}

@@ -86,12 +86,12 @@
                         {{ Form::select('hire_year',AppHelper::getYear(0,20,'Select Hire Year'),'',array('id'=>'hire_year')) }}
                     </div>
                     <div class="form-group">
-                        <label>Hire Type</label><br />
+                        <label>Hire Type <span class="text-danger">*</span></label><br />
                         {{ Form::select('hire_type',AppHelper::getHireType(),'',array('id'=>'hire_type')) }}
                         @include('partials.error-message',array('field' => 'hire_type'))
                     </div>
                     <div class="form-group">
-                        <label>Health Plan</label><br />
+                        <label>Health Plan <span class="text-danger">*</span></label><br />
                         {{ Form::text('health_plan','',array('class' => 'form-control','id'=>'health_plan')) }}
                         @include('partials.error-message',array('field' => 'health_plan'))
                 </div>

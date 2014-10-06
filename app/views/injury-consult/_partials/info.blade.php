@@ -48,7 +48,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Pain Level</label><br>
-                            <select name="info[pain_level]">
+                            <select name="info[pain_level][general]">
                                 <option value="0" disabled="" selected="">Select Pain Level</option>
                                 <option value="1">Lorem Ipsum</option>
                                 <option value="2">Dolor Sit Amet</option>
@@ -83,47 +83,47 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Lost Time</label><br>
-                            <input type="text" name="lost-time" class="form-control">
+                            <input type="text" name="info[lost_time]" value="" class="form-control">
                         </div>
-                        <input type="checkbox" name="" value=""><span class="checkbox-label">MD Seen</span><br>
+                        <input type="checkbox" name="info[md_seen]" value="1"><span class="checkbox-label">MD Seen</span><br>
                         <div class="form-group">
                             <label>Body Part</label><br>
-                            <select>
-                                <option value="" disabled="" selected="">Select Body Part</option>
-                                <option value="">Lorem Ipsum</option>
-                                <option value="">Dolor Sit Amet</option>
+                            <select name="info[body_part]">
+                                <option value="0" disabled="" selected="">Select Body Part</option>
+                                <option value="1">Lorem Ipsum</option>
+                                <option value="2">Dolor Sit Amet</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Injury Type</label><br>
-                            <select>
-                                <option value="" disabled="" selected="">Select Injury Type</option>
-                                <option value="">Lorem Ipsum</option>
-                                <option value="">Dolor Sit Amet</option>
+                            <select name="info[injury_type]">
+                                <option value="0" disabled="" selected="">Select Injury Type</option>
+                                <option value="1">Lorem Ipsum</option>
+                                <option value="2">Dolor Sit Amet</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Severity Rate</label><br>
-                            <select>
-                                <option value="" disabled="" selected="">Select Severity Rate</option>
-                                <option value="">Lorem Ipsum</option>
-                                <option value="">Dolor Sit Amet</option>
+                            <select name="info[severity_rate]">
+                                <option value="0" disabled="" selected="">Select Severity Rate</option>
+                                <option value="1">Lorem Ipsum</option>
+                                <option value="2">Dolor Sit Amet</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Pain Rate</label><br>
-                            <select>
-                                <option value="" disabled="" selected="">Select Pain Rate</option>
-                                <option value="">Lorem Ipsum</option>
-                                <option value="">Dolor Sit Amet</option>
+                            <select name="info[pain_rate]">
+                                <option value="0" disabled="" selected="">Select Pain Rate</option>
+                                <option value="1">Lorem Ipsum</option>
+                                <option value="2">Dolor Sit Amet</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Improvement Level</label><br>
-                            <select>
-                                <option value="" disabled="" selected="">Select Improvement Level</option>
-                                <option value="">Lorem Ipsum</option>
-                                <option value="">Dolor Sit Amet</option>
+                            <select name="info[improvement_level]">
+                                <option value="0" disabled="" selected="">Select Improvement Level</option>
+                                <option value="1">Lorem Ipsum</option>
+                                <option value="2">Dolor Sit Amet</option>
                             </select>
                         </div>
                     </div>
