@@ -169,6 +169,14 @@ background-color:transparent;
 width: 75px;
 height: 34px;
 }
+#butreport {
+margin-top: 16px;    
+background-image: url('img/bg_report_button.gif');
+background-repeat:no-repeat;
+background-color:transparent;
+width: 137px;
+height: 34px;
+}
 #butreset {
 margin-top: 16px;    
 background-image: url('img/bg_reset_button.jpg');

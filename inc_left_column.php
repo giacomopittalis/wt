@@ -43,6 +43,5 @@
                 <li><img src="img/ico_edit_employee.jpg"><a href="conperemp.php">Contacts Per Employee</a></li>
                 <li><img src="img/ico_edit_employee.jpg"><a href="consperemp.php">Consults Per Employee</a></li>
                 <li><img src="img/ico_edit_employee.jpg"><a href="partrep.php">PARTICIPATION REPORT</a></li>
-                <li><img src="img/ico_edit_employee.jpg"><a href="participation.php">PARTICIPATION REPORT 2 (BETA) </a></li> 
             </ul>
         </div>
